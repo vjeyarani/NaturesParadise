@@ -530,3 +530,128 @@ p {
     transform: translateY(-4px);
 }
 
+/* --------------------------------
+   DECEMBER HUB – MINI ITINERARIES
+---------------------------------- */
+
+#december-itineraries h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.mini-itinerary-grid {
+    gap: var(--space-lg);
+}
+
+.mini-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+}
+
+.mini-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.mini-card h3 {
+    color: var(--color-ocean-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.mini-card p {
+    color: var(--color-mountain-blue);
+    font-size: 15px;
+}
+
+/* --------------------------------
+   DECEMBER HUB – FAMILY STAYS
+---------------------------------- */
+
+#december-stays h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.december-stays-grid {
+    gap: var(--space-lg);
+}
+
+.dec-stay-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    text-align: center;
+    border-radius: var(--radius-md);
+    transition: 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.dec-stay-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.dec-stay-card h3 {
+    color: var(--color-ocean-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.dec-stay-card p {
+    color: var(--color-mountain-blue);
+    font-size: 15px;
+}
+/* --------------------------------
+   DECEMBER HUB – FREE FAMILY KIT
+---------------------------------- */
+
+#december-kit h2 {
+    margin-bottom: var(--space-md);
+}
+
+#december-kit p {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    color: var(--color-mountain-blue);
+}
+
+/* --------------------------------
+   DECEMBER HUB – MOOD SECTION
+---------------------------------- */
+
+#december-mood h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.mood-box {
+    height: 180px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-mist-grey);
+}
+/* --------------------------------
+   DECEMBER HUB – TRUST SECTION
+---------------------------------- */
+
+#december-trust h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.trust-list {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.trust-list li {
+    margin-bottom: var(--space-sm);
+    font-size: 18px;
+    color: var(--color-mountain-blue);
+}
+

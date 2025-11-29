@@ -1,0 +1,64 @@
+/* --------------------------------------------
+   Nature’s Paradise – Global Design Tokens
+   December Visual Framework + Travel Brand
+--------------------------------------------- */
+
+:root {
+    /* -----------------------------
+       COLOR PALETTE
+       (From Visual Framework Document)
+    ------------------------------ */
+
+    /* Warm Tropical Set */
+    --color-sand-beige: #E8DCC9;
+    --color-sunset-peach: #F7B79A;
+    --color-coconut-brown: #B59A87;
+    --color-ocean-teal: #2E7D8E;
+
+    /* Calm Nature Set */
+    --color-mist-grey: #DDE2E6;
+    --color-tea-green: #7FA88F;
+    --color-mountain-blue: #3F5F7F;
+
+    /* Snow Set */
+    --color-snow-white: #F9FAFB;
+    --color-icy-blue: #D8E8F2;
+    --color-pine-shadow: #2D3A3F;
+
+    /* Festive Urban Set */
+    --color-gold-glow: #DDBC80;
+    --color-night-navy: #1C2431;
+    --color-champagne: #F4E8D5;
+
+    /* Neutral Base Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* -----------------------------
+       TYPOGRAPHY
+    ------------------------------ */
+    --font-primary: 'Inter', sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+    --font-size-hero: 48px;
+
+    /* -----------------------------
+       SPACING
+    ------------------------------ */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 32px;
+    --space-xl: 64px;
+
+    /* -----------------------------
+       RADIUS & SHADOWS
+    ------------------------------ */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 24px;
+
+    --shadow-soft: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-medium: 0 6px 20px rgba(0,0,0,0.12);
+}
