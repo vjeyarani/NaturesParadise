@@ -153,40 +153,32 @@ p {
    HERO SECTION
 ---------------------------------- */
 
-hero-section {
-    background-image: url('assets/images/hero.jpg');
+#hero-section {
+    background-image: url('assets/images/hero.png'); /* update filename */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 160px 0;
+
+    height: 80vh;
+    min-height: 520px;
+
     text-align: center;
     position: relative;
     color: var(--color-white);
 }
 
-
-.hero-content h1 {
-    max-width: 800px;
-    margin: 0 auto var(--space-md);
+#hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
 }
 
-.hero-content p {
-    max-width: 650px;
-    margin: 0 auto var(--space-lg);
-    font-size: 18px;
-    color: var(--color-mountain-blue);
+#hero-section .hero-content {
+    position: relative;
+    z-index: 2;
 }
 
-.hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-}
-
-.hero-cta a {
-    min-width: 200px;
-    text-align: center;
-}
 
 /* --------------------------------
    CATEGORY HIGHLIGHTS
