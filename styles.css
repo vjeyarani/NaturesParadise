@@ -154,18 +154,24 @@ p {
 ---------------------------------- */
 
 #hero-section {
-    background-image: url('assets/images/hero.png'); /* update filename */
+    background-image: url('assets/images/hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
 
-    height: 80vh;
+    height: 70vh;
     min-height: 520px;
 
+    display: flex;
+    align-items: flex-start;   /* 🟢 from center → flex-start */
+    justify-content: center;
+
+    padding-top: 120px;        /* 🟢 pushes text up beautifully */
     text-align: center;
     position: relative;
     color: var(--color-white);
 }
+
 
 #hero-section::before {
     content: "";
