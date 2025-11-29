@@ -116,18 +116,22 @@ p {
    HEADER / NAVIGATION
 ------------------------------ */
 
-/* HEADER WRAPPER */
+/* ------------------------------
+   FINAL HEADER FIX — HOUSE OF KHADDAR STYLE
+--------------------------------*/
+
 #site-header {
-    padding: 14px 0;                 /* premium spacing */
     background: #ffffff;
     border-bottom: 1px solid #eee;
 }
 
-/* FLEX ALIGN THE HEADER */
+/* FIXED HEIGHT = NAV WILL NEVER DROP */
 #site-header .container {
     display: flex;
-    align-items: center;             /* vertical centering */
-    justify-content: space-between;  /* logo left, menu right */
+    align-items: center;       /* perfect vertical centering */
+    justify-content: space-between;
+    height: 64px;              /* ⭐ this is the magic line */
+    gap: 20px;
 }
 
 .nav-menu {
@@ -667,40 +671,46 @@ p {
 }
 
 
-/* LOGO + BRAND NAME GROUP */
+/* LOGO GROUP */
 .logo {
     display: flex;
-    align-items: center;              /* keeps logo + text in same line */
-    gap: 8px;                         /* premium spacing */
+    align-items: center;
+    gap: 8px;
 }
 
-/* LOGO IMAGE — BIG BUT CLEAN SIZE */
+/* LOGO SIZE */
 .logo img {
-    height: 34px;                     /* exactly like House of Khaddar */
+    height: 34px;    /* big but clean */
     width: auto;
     display: block;
-    object-fit: contain;
 }
 
-/* BRAND NAME TEXT — PREMIUM */
+/* BRAND NAME */
 .brand-name {
-    font-weight: 700;                 /* bold like HK */
-    font-size: 22px;                  /* visual harmony */
-    color: #0B5853;                   /* your brand color */
-    letter-spacing: -0.5px;           /* luxury tight spacing */
-}
-/* Nature’s – lighter, elegant */
-.brand-light {
-    font-size: 23px;
-    font-weight: 500;
-    letter-spacing: -0.3px;
-    color: #0B5853;     /* your premium teal */
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
-/* Paradise – bold, strong, premium */
+/* Nature's – elegant light */
+.brand-light {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    color: #0B5853;
+}
+
+/* Paradise – bold strong premium */
 .brand-bold {
+    font-weight: 800;
     font-size: 24px;
-    font-weight: 800;   /* HK style bold */
     letter-spacing: -0.8px;
-    color: #0A3F46;     /* deeper refined teal */
+    color: #0A3F46;
+}
+
+/* NAV MENU FIX */
+.nav-menu {
+    display: flex;
+    align-items: center;    /* ⭐ keeps nav in same line */
+    gap: 28px;
 }
