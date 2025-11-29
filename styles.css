@@ -116,19 +116,18 @@ p {
    HEADER / NAVIGATION
 ------------------------------ */
 
+/* HEADER WRAPPER */
 #site-header {
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-soft);
-    padding: var(--space-md) 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 14px 0;                 /* premium spacing */
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
 }
 
-.logo {
-    font-size: var(--font-size-lg);
-    font-weight: 600;
-    color: var(--color-night-navy);
+/* FLEX ALIGN THE HEADER */
+#site-header .container {
+    display: flex;
+    align-items: center;             /* vertical centering */
+    justify-content: space-between;  /* logo left, menu right */
 }
 
 .nav-menu {
@@ -667,28 +666,29 @@ p {
     color: var(--color-mountain-blue);
 }
 
-/* Logo container */
+
+/* LOGO + BRAND NAME GROUP */
 .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center;              /* keeps logo + text in same line */
+    gap: 8px;                         /* premium spacing */
 }
 
-/* Icon */
+/* LOGO IMAGE — BIG BUT CLEAN SIZE */
 .logo img {
-    height: 38px;       /* perfect size */
+    height: 34px;                     /* exactly like House of Khaddar */
     width: auto;
     display: block;
+    object-fit: contain;
 }
 
-/* Brand name container */
+/* BRAND NAME TEXT — PREMIUM */
 .brand-name {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-    font-family: inherit;   /* same as header font */
+    font-weight: 700;                 /* bold like HK */
+    font-size: 22px;                  /* visual harmony */
+    color: #0B5853;                   /* your brand color */
+    letter-spacing: -0.5px;           /* luxury tight spacing */
 }
-
 /* Nature’s – lighter, elegant */
 .brand-light {
     font-size: 23px;
