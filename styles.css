@@ -186,22 +186,6 @@ p {
     position: relative;
     z-index: 2;
 }
-.hero-content {
-    animation: fadeSlide 1.4s ease-out forwards;
-}
-
-@keyframes fadeSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 #hero-section h1 {
     color: #0B5853;
@@ -685,14 +669,21 @@ p {
     color: var(--color-mountain-blue);
 }
 
-/* Fade-in on scroll animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.logo img {
+    height: 38px;
+    width: auto;
 }
+
+.brand-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0B5853; /* your new signature color */
+}
+
