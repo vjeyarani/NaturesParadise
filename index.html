@@ -33,9 +33,9 @@
 
 
     <!-- HERO SECTION -->
-   <section id="hero-section">
+   <section id="hero-section fade-in">
     <div class="container">
-        <div class="hero-content text-center">
+        <div class="hero-content text-center fade-in">
             <h1>Curated Travel for the Modern Explorer</h1>
             <p>Discover warm stays, calm destinations, and premium guides curated for families, couples, and effortless planners.</p>
             <div class="hero-cta">
@@ -48,8 +48,8 @@
 
 
     <!-- CATEGORY HIGHLIGHTS -->
-<section id="category-highlights">
-    <div class="container">
+<section id="category-highlights fade-in">
+    <div class="container ">
         <h2 class="text-center">Explore by Travel Style</h2>
 
         <div class="grid-4 category-grid">
@@ -80,7 +80,7 @@
 
 
     <!-- FEATURED DESTINATIONS -->
-    <section id="featured-destinations">
+    <section id="featured-destinations  fade-in">
     <div class="container">
         <h2 class="text-center">Featured Destinations</h2>
 
@@ -299,8 +299,21 @@
 
     </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll('.fade-in');
 
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
 
-  <script src="scripts/main.js"></script>
+    fadeElements.forEach(el => observer.observe(el));
+});
+</script>
+
 </body>
 </html>
