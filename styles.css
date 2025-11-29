@@ -503,3 +503,30 @@ p {
   font-size: 15px;
 }
 
+/* --------------------------------
+   DECEMBER HUB – FEATURED DESTINATIONS
+---------------------------------- */
+
+#december-featured h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.december-featured-grid {
+    margin-top: var(--space-md);
+    gap: var(--space-lg);
+}
+
+.featured-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s;
+}
+
+.featured-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+}
+
