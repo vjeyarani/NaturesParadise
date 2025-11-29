@@ -189,7 +189,7 @@ p {
 
 
 #hero-section h1 {
-    color: #0B5853
+    color: #0B5853;
 }
 
 #hero-section p {
@@ -670,3 +670,14 @@ p {
     color: var(--color-mountain-blue);
 }
 
+/* Fade-in on scroll animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
