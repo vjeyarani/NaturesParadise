@@ -419,3 +419,87 @@ p {
     opacity: 0.8;
 }
 
+/* --------------------------------
+   DECEMBER HUB – HERO SECTION
+---------------------------------- */
+
+#december-hero {
+    padding: 120px 0;
+    background-color: var(--color-snow-white);
+    text-align: center;
+}
+
+#december-hero h1 {
+    max-width: 800px;
+    margin: 0 auto var(--space-md);
+}
+
+#december-hero p {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    font-size: 18px;
+    color: var(--color-mountain-blue);
+}
+/* --------------------------------
+   DECEMBER HUB – WHY DECEMBER
+---------------------------------- */
+
+#december-why h2 {
+    margin-bottom: var(--space-md);
+}
+
+#december-why .why-intro {
+    max-width: 700px;
+    margin: 0 auto var(--space-md);
+    color: var(--color-mountain-blue);
+}
+
+#december-why .why-list {
+    list-style: none;
+    margin: 0 auto var(--space-lg);
+    padding: 0;
+    max-width: 400px;
+}
+
+#december-why .why-list li {
+    margin-bottom: var(--space-sm);
+    font-size: 18px;
+}
+
+/* --------------------------------
+   DECEMBER – DESTINATION CATEGORIES
+---------------------------------- */
+
+#december-categories h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.category-grid-december {
+  margin-top: var(--space-md);
+  gap: var(--space-lg);
+}
+
+.cat-card {
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.cat-card h3 {
+  margin-top: var(--space-sm);
+  color: var(--color-ocean-teal);
+}
+
+.cat-card p {
+  color: var(--color-mountain-blue);
+  font-size: 15px;
+}
+
