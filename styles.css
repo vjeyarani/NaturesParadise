@@ -681,7 +681,7 @@ p {
 
 /* LOGO SIZE */
 .logo img {
-    height: 34px;    /* big but clean */
+    height: 30px;    /* big but clean */
     width: auto;
     display: block;
 }
