@@ -140,6 +140,18 @@ p {
     list-style: none;
 }
 
+/* Remove bullets from nav completely */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+}
+
+
 .nav-menu a {
     text-decoration: none;
     font-size: var(--font-size-base);
@@ -333,18 +345,21 @@ p {
 }
 
 .featured-card {
-  background: var(--color-white);
-  padding: 24px;
-  border-radius: var(--radius-md);
-  text-align: center;
-  transition: 0.25s ease;
-  box-shadow: var(--shadow-soft);
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--color-white);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.25s ease;
 }
 
 .featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
 }
+
 
 .featured-card h3 {
   color: var(--color-ocean-teal);
@@ -558,7 +573,7 @@ p {
 }
 
 #december-hero h1 {
-    color: #18a8ad;
+    color: #18a8ad; /* 18a8ad; */
 }
 
 .december-hero-content {
