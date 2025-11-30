@@ -152,6 +152,58 @@ p {
 .nav-menu a.active {
     color: var(--color-ocean-teal);
 }
+/* NAV MENU FIX */
+.nav-menu {
+    display: flex;
+    align-items: center;    /* ⭐ keeps nav in same line */
+    gap: 28px;
+}
+
+
+
+/* LOGO GROUP */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -3px;   /* ⭐ small upward lift */
+}
+
+
+/* LOGO SIZE */
+.logo img {
+    height: 30px;    /* big but clean */
+    width: auto;
+    display: block;
+}
+
+/* BRAND NAME */
+.brand-name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Nature's – elegant light */
+.brand-light {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    color: #0B5853;
+}
+
+/* Paradise – bold strong premium */
+.brand-bold {
+    font-weight: 800;
+    font-size: 23px;
+    letter-spacing: -0.8px;
+    color: #0A3F46;
+}
+
+
+
+
 
 /* --------------------------------
    HERO SECTION
@@ -470,7 +522,7 @@ p {
 }
 
 #december-hero h1 {
-    color: #39cbf0;
+    color: #09949e;
 }
 
 .december-hero-content {
