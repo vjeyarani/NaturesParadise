@@ -543,5 +543,5 @@ p {
 @media (max-width: 520px) {
   .mood-grid { grid-template-columns: 1fr; }
   #december-hero { height: 60vh; min-height: 360px; }
-  .december-hero-content h1 { font-size: 28px; }
+  .december-hero-content h1 { text-decoration-color:#0B5853; font-size: 28px; }
 }
