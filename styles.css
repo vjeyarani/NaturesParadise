@@ -158,21 +158,22 @@ p {
 #hero-section {
     background-image: url('assets/images/hero.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center -90px;   /* crop only TOP */
     background-repeat: no-repeat;
 
     height: 70vh;
     min-height: 520px;
 
     display: flex;
-    align-items: flex-start;   /* 🟢 from center → flex-start */
+    align-items: flex-start;
     justify-content: center;
 
-    padding-top: 120px;        /* 🟢 pushes text up beautifully */
+    padding-top: 160px;   /* text slightly down */
     text-align: center;
     position: relative;
     color: var(--color-white);
 }
+
 
 
 /* Soft overlay */
