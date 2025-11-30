@@ -158,7 +158,7 @@ p {
 #hero-section {
     background-image: url('assets/images/hero.png');
     background-size: cover;
-    background-position: center -115px;   /* crop only TOP */
+    background-position: center -120px;   /* crop only TOP */
     background-repeat: no-repeat;
 
     height: 70vh;
