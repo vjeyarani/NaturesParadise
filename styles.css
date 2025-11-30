@@ -736,4 +736,47 @@ p {
     margin-bottom: var(--space-md);
 }
 
+/* DECEMBER HUB — HERO */
+#december-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hero Background */
+.december-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/images/december/tropical_reset_16_9.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.72);
+    z-index: 1;
+}
+
+/* Hero Content */
+.december-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+}
+
+#december-hero h1 {
+    color: #ffffff;
+    margin-bottom: var(--space-md);
+}
+
+#december-hero p {
+    color: #f0f0f0;
+    margin-bottom: var(--space-lg);
+    font-size: 18px;
+}
+
 
