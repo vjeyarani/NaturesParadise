@@ -130,7 +130,7 @@ p {
     display: flex;
     align-items: center;       /* perfect vertical centering */
     justify-content: space-between;
-    height: 64px;              /* ⭐ this is the magic line */
+    height: 68px;              /* ⭐ this is the magic line */
     gap: 20px;
 }
 
