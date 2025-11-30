@@ -133,7 +133,7 @@ p {
     height: 70px;              /* ⭐ this is the magic line */
     gap: 20px;
 }
-
+.brand-bold
 .nav-menu {
     gap: var(--space-lg);
     list-style: none;
@@ -672,12 +672,16 @@ p {
 }
 
 
+
 /* LOGO GROUP */
+
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-top: -3px;   /* ⭐ small upward lift */
 }
+
 
 /* LOGO SIZE */
 .logo img {
