@@ -719,3 +719,11 @@ p {
     align-items: center;    /* ⭐ keeps nav in same line */
     gap: 28px;
 }
+
+.destination-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
