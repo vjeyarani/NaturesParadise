@@ -1,4 +1,3 @@
-
 /* ----------------------------------------------------
    Nature’s Paradise – Global Layout & Base Styling
 ----------------------------------------------------- */
@@ -436,112 +435,374 @@ p {
     opacity: 0.8;
 }
 
-
-
-/* ---------------- DECEMBER HUB — shared additions ---------------- */
+/* --------------------------------
+   DECEMBER HUB – HERO SECTION
+---------------------------------- */
 
 #december-hero {
-  position: relative;
-  height: 70vh;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  text-align: center;
-  overflow: hidden;
-  padding: 0;
+    padding: 120px 0;
+    background-color: var(--color-snow-white);
+    text-align: center;
 }
 
-.december-hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('../../assets/images/december/tropical_reset_16_9.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: brightness(0.68) saturate(0.95);
-  z-index: 1;
+#december-hero h1 {
+    max-width: 800px;
+    margin: 0 auto var(--space-md);
 }
 
-/* If you saved regenerated Nature Calm hero, keep it available */
-.december-hero-bg.nature {
-  background-image: url('../../assets/images/december/nature_calm_reset_16_9.png');
+#december-hero p {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    font-size: 18px;
+    color: var(--color-mountain-blue);
 }
+/* --------------------------------
+   DECEMBER HUB – WHY DECEMBER
+---------------------------------- */
 
-.december-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 820px;
-  padding: 48px 24px;
+#december-why h2 {
+    margin-bottom: var(--space-md);
 }
 
 #december-why .why-intro {
-  color: var(--color-night-navy);
-  font-size: 18px;
-  max-width: 900px;
-  margin: 0 auto;
+    max-width: 700px;
+    margin: 0 auto var(--space-md);
+    color: var(--color-mountain-blue);
 }
 
-/* category images */
-.cat-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
+#december-why .why-list {
+    list-style: none;
+    margin: 0 auto var(--space-lg);
+    padding: 0;
+    max-width: 400px;
 }
 
-/* mood grid */
-.mood-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+#december-why .why-list li {
+    margin-bottom: var(--space-sm);
+    font-size: 18px;
+}
+
+/* --------------------------------
+   DECEMBER – DESTINATION CATEGORIES
+---------------------------------- */
+
+#december-categories h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.category-grid-december {
+  margin-top: var(--space-md);
   gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
-.mood-box {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
-.mood-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
 }
 
-/* mini itineraries */
-.mini-itinerary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
-.mini-card {
-  background-color: var(--color-white);
+.cat-card {
+  background: var(--color-white);
   padding: var(--space-lg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-soft);
   text-align: center;
+  transition: 0.25s ease;
 }
 
-/* destination card (reuse your .destination-img rules) */
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+}
+
+.cat-card h3 {
+  margin-top: var(--space-sm);
+  color: var(--color-ocean-teal);
+}
+
+.cat-card p {
+  color: var(--color-mountain-blue);
+  font-size: 15px;
+}
+
+/* --------------------------------
+   DECEMBER HUB – FEATURED DESTINATIONS
+---------------------------------- */
+
+#december-featured h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.december-featured-grid {
+    margin-top: var(--space-md);
+    gap: var(--space-lg);
+}
+
+.featured-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s;
+}
+
+.featured-card:hover {
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
+}
+
+/* --------------------------------
+   DECEMBER HUB – MINI ITINERARIES
+---------------------------------- */
+
+#december-itineraries h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.mini-itinerary-grid {
+    gap: var(--space-lg);
+}
+
+.mini-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+}
+
+.mini-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.mini-card h3 {
+    color: var(--color-ocean-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.mini-card p {
+    color: var(--color-mountain-blue);
+    font-size: 15px;
+}
+
+/* --------------------------------
+   DECEMBER HUB – FAMILY STAYS
+---------------------------------- */
+
+#december-stays h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.december-stays-grid {
+    gap: var(--space-lg);
+}
+
+.dec-stay-card {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    text-align: center;
+    border-radius: var(--radius-md);
+    transition: 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.dec-stay-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.dec-stay-card h3 {
+    color: var(--color-ocean-teal);
+    margin-bottom: var(--space-sm);
+}
+
+.dec-stay-card p {
+    color: var(--color-mountain-blue);
+    font-size: 15px;
+}
+/* --------------------------------
+   DECEMBER HUB – FREE FAMILY KIT
+---------------------------------- */
+
+#december-kit h2 {
+    margin-bottom: var(--space-md);
+}
+
+#december-kit p {
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    color: var(--color-mountain-blue);
+}
+
+/* --------------------------------
+   DECEMBER HUB – MOOD SECTION
+---------------------------------- */
+
+#december-mood h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+.mood-box {
+    height: 180px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-mist-grey);
+}
+/* --------------------------------
+   DECEMBER HUB – TRUST SECTION
+---------------------------------- */
+
+#december-trust h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.trust-list {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.trust-list li {
+    margin-bottom: var(--space-sm);
+    font-size: 18px;
+    color: var(--color-mountain-blue);
+}
+
+
+
+/* LOGO GROUP */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -3px;   /* ⭐ small upward lift */
+}
+
+
+/* LOGO SIZE */
+.logo img {
+    height: 30px;    /* big but clean */
+    width: auto;
+    display: block;
+}
+
+/* BRAND NAME */
+.brand-name {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Nature's – elegant light */
+.brand-light {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    color: #0B5853;
+}
+
+/* Paradise – bold strong premium */
+.brand-bold {
+    font-weight: 800;
+    font-size: 23px;
+    letter-spacing: -0.8px;
+    color: #0A3F46;
+}
+
+/* NAV MENU FIX */
+.nav-menu {
+    display: flex;
+    align-items: center;    /* ⭐ keeps nav in same line */
+    gap: 28px;
+}
+
 .destination-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
 }
 
-/* responsive tweaks */
-@media (max-width: 900px) {
-  .mood-grid { grid-template-columns: repeat(2, 1fr); }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .mini-itinerary-grid { grid-template-columns: 1fr; }
+.destination-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
 }
-@media (max-width: 520px) {
-  .mood-grid { grid-template-columns: 1fr; }
-  #december-hero { height: 60vh; min-height: 360px; }
-  .december-hero-content h1 { font-size: 28px; }
+
+/* DECEMBER HUB — HERO */
+#december-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
 }
+
+/* Hero Background */
+.december-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/images/december/tropical_reset_16_9.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.72);
+    z-index: 1;
+}
+
+/* Hero Content */
+.december-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+}
+
+#december-hero h1 {
+    color: #ffffff;
+    margin-bottom: var(--space-md);
+}
+
+#december-hero p {
+    color: #f0f0f0;
+    margin-bottom: var(--space-lg);
+    font-size: 18px;
+}
+
+.cat-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+.mood-box {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+.mood-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+
