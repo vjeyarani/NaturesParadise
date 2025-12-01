@@ -882,3 +882,93 @@ p {
     z-index: 2;
 }
 
+.travel-styles {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.travel-styles h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #0f3e47;
+}
+
+/* CARD GRID */
+.style-cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    width: 260px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.style-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+}
+
+/* TEXT INSIDE CARDS */
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1b5e68;
+}
+
+.card p {
+    color: #4b4b4b;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .style-cards {
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+/* generic icon size + color control */
+.icon, .card svg {
+  width: 56px;
+  height: 56px;
+  color: #2E7D8E; /* Ocean Teal from Visual Framework — change as needed */ 
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* override per card if needed */
+.card.tropical { color: #2E7D8E; }  /* Ocean Teal */
+.card.nature   { color: #7FA88F; }  /* Tea Garden Green */
+.card.snow     { color: #3F5F7F; }  /* Mountain Blue */
+.card.urban    { color: #1C2431; }  /* Night Navy */
+
+.card h3 { margin-top: 8px; font-size: 18px; }
+
