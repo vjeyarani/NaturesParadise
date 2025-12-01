@@ -1,7 +1,0 @@
-<!-- urban.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Urban Skyline Icon">
-  <rect x="3" y="10" width="4" height="10"></rect>
-  <rect x="10" y="6" width="4" height="14"></rect>
-  <rect x="17" y="12" width="4" height="8"></rect>
-  <line x1="1" y1="20" x2="23" y2="20"></line>
-</svg>
