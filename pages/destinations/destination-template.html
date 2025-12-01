@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{DestinationName}} – XPLORE WORLD</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../tokens.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+    <div class="container flex-between">
+        <div class="logo">
+            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
+            <span class="brand-name">
+                <span class="brand-light"></span>
+                <span class="brand-bold"></span>
+            </span>
+        </div>
+
+        <nav>
+            <ul class="nav-menu flex">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../destinations.html" class="active">Destinations</a></li>
+                <li><a href="../guides.html">Guides</a></li>
+                <li><a href="../stays.html">Stays</a></li>
+                <li><a href="../december/december-hub.html">December Hub</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- HERO SECTION -->
+<section id="destination-hero" style="background-image: url('../../assets/images/{{HeroImage}}');">
+    <div class="container text-center">
+        <h1>{{DestinationName}}</h1>
+        <p>{{ShortSubtitle}}</p>
+    </div>
+</section>
+
+
+<!-- OVERVIEW -->
+<section id="destination-overview">
+    <div class="container">
+        <h2>Why Visit {{DestinationName}}?</h2>
+        <p>{{OverviewParagraph1}}</p>
+        <p>{{OverviewParagraph2}}</p>
+    </div>
+</section>
+
+
+<!-- TOP EXPERIENCES -->
+<section id="top-experiences">
+    <div class="container">
+        <h2>Top Experiences</h2>
+
+        <div class="grid-3 experience-grid">
+
+            <div class="experience-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{Img1}}');"></div>
+                <h3>{{Experience1Title}}</h3>
+                <p>{{Experience1Desc}}</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{Img2}}');"></div>
+                <h3>{{Experience2Title}}</h3>
+                <p>{{Experience2Desc}}</p>
+            </div>
+
+            <div class="experience-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{Img3}}');"></div>
+                <h3>{{Experience3Title}}</h3>
+                <p>{{Experience3Desc}}</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FAMILY TIPS -->
+<section id="family-tips">
+    <div class="container">
+        <h2>Family Travel Tips for {{DestinationName}}</h2>
+
+        <ul class="tips-list">
+            <li>{{Tip1}}</li>
+            <li>{{Tip2}}</li>
+            <li>{{Tip3}}</li>
+            <li>{{Tip4}}</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- STAY RECOMMENDATIONS -->
+<section id="recommended-stays">
+    <div class="container">
+        <h2>Where to Stay</h2>
+
+        <div class="grid-3 stay-grid">
+            <div class="stay-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{StayImg1}}');"></div>
+                <h3>{{Stay1Title}}</h3>
+                <p>{{Stay1Desc}}</p>
+            </div>
+
+            <div class="stay-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{StayImg2}}');"></div>
+                <h3>{{Stay2Title}}</h3>
+                <p>{{Stay2Desc}}</p>
+            </div>
+
+            <div class="stay-card">
+                <div class="placeholder-img" style="background-image:url('../../assets/images/{{StayImg3}}');"></div>
+                <h3>{{Stay3Title}}</h3>
+                <p>{{Stay3Desc}}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section id="destination-cta">
+    <div class="container text-center">
+        <h2>Ready for Your {{DestinationName}} Escape?</h2>
+        <a href="../december/december-hub.html" class="btn-primary">Get December Family Kit</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+    <div class="container">
+        <p class="footer-copy">© 2025 XPLORE WORLD. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
