@@ -358,3 +358,95 @@ p {
     .grid-3 { grid-template-columns: 1fr; }
     .card { width: 100%; }
 }
+
+/* ====================================================
+   PREMIUM FOOTER (Luxury Travel Style)
+==================================================== */
+
+#premium-footer {
+    background-color: #0f3e47;  /* Night Navy */
+    color: var(--color-white);
+    padding: 60px 0 0;
+    margin-top: 80px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #18a8ad; /* soft teal */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #e6f7f7;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    color: #0abb95;
+}
+
+/* Logo column */
+.footer-logo {
+    width: 120px;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* Social icons */
+.social li span {
+    margin-right: 6px;
+}
+
+/* Copyright bar */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 40px;
+    padding: 18px 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
