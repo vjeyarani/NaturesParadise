@@ -123,19 +123,26 @@ p {
 #hero-section {
     background-image: url('assets/images/hero.png');
     background-size: cover;
-    background-position: center center;   /* FIXED */
+    background-position: center center;
     background-repeat: no-repeat;
-
-    height: 65vh;
-    min-height: 460px;
+    height: 70vh;
+    min-height: 480px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center;   /* perfect vertical centering */
+    align-items: center;       /* perfect horizontal centering */
 
     text-align: center;
     position: relative;
-    color: var(--color-white);
+    color: white;
+}
+
+#hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
 }
 
 #hero-section::before {
