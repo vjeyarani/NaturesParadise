@@ -370,7 +370,7 @@ p {
 ==================================================== */
 
 #premium-footer {
-    background-color: #0f3e47;  /* Night Navy */
+    background: color #0c0238;  /* Night Navy */
     color: var(--color-white);
     padding: 60px 0 0;
     margin-top: 80px;
