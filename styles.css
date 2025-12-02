@@ -946,3 +946,63 @@ D) Soft sky blue (#bfeaff) */
     margin: 0;
     color: #555;
 }
+
+/* -------------------------------
+   Maldives Page (page-specific)
+--------------------------------- */
+
+.maldives-hero-text h1 {
+    color: #0f3e47;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+.maldives-hero-text p {
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+}
+
+.destination-hero {
+    position: relative;
+    height: 65vh;
+    min-height: 420px;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+.destination-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.maldives-hero-text {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 720px;
+    background: rgba(0,0,0,0.30);
+    padding: 28px 32px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+}
+
+/* Section spacing fix */
+.destination-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Maldives badges */
+.badge {
+    background: #e8f4f4;
+    color: #2e7d8e;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
