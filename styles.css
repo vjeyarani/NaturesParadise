@@ -86,7 +86,8 @@ p {
 
 #site-header {
     background: #ffffff;
-    border-bottom: 1px solid #eee;
+   /* border-bottom: 1px solid #eee;*/
+    border-bottom: 1px solid rgba(0,0,0,0.08);
     height: auto;                     /* allow flexible height */
     /* padding: 20px 0 18px;             /* TOP and BOTTOM space */
     padding-top: 24px;
