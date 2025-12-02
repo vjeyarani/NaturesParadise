@@ -711,3 +711,73 @@ section:first-of-type {
     transform: translateY(-6px);
     box-shadow: 0 8px 22px rgba(0,0,0,0.14);
 }
+
+
+/* ================================
+   DESTINATION HERO (Bali, etc.)
+   Independent from Home Hero
+================================ */
+
+.destination-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 60vh;              /* ⭐ not as tall as homepage */
+    min-height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    color: white;
+    padding: 0;
+}
+
+.destination-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.28);  /* subtle overlay */
+    z-index: 1;
+}
+
+.destination-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 940px;
+    padding: 0 20px;
+}
+
+.destination-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.destination-hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .destination-hero {
+        height: 50vh;
+        min-height: 360px;
+    }
+    .destination-hero h1 {
+        font-size: 32px;
+    }
+}
+
+.bali-page .destination-hero h1 {
+    color: #ffffff; /* or whatever color you choose */
+}
+
