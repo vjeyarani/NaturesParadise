@@ -256,7 +256,7 @@ p {
 }
 
 #hero-section h1 {
-    color: #08be91);
+    color: #0abb95;
     text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
 
 }
@@ -269,7 +269,10 @@ p {
 #hero-section p {
     text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
 }
-
+.hero-text {
+    margin-top: -80px;   /* smaller pull-up */
+    padding: 16px 20px;  /* cleaner */
+}
 
 /* --------------------------------
    CATEGORY HIGHLIGHTS
@@ -1024,6 +1027,15 @@ p {
 .dest-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+.dest-card {
+    background: #ffffff !important;
+}
+
+.dest-card img {
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background-color: transparent !important;
 }
 
 
