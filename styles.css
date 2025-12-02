@@ -877,3 +877,36 @@ D) Soft sky blue (#bfeaff) */
 .bali-page .tight-section {
     padding: 28px 0;  /* super-clean Apple-style spacing */
 }
+/* CLICKABLE stay card */
+.bali-page .stay-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.bali-page .stay-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Rounded image container */
+.bali-page .stay-card .card-img-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+/* Image */
+.bali-page .stay-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
