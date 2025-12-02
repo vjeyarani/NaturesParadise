@@ -124,42 +124,40 @@ p {
 /* --------------------------------
    2. HOME PAGE HERO (UNIQUE)
 ---------------------------------- */
+/* ============================
+   PERFECT CENTER-CENTER HERO
+=============================== */
 #hero-section {
     background-image: url('assets/images/hero.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 70vh;
-    min-height: 480px;
+
+    height: calc(100vh - 72px);  /* exact full-height minus navbar */
+    min-height: 520px;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;   /* perfect vertical centering */
-    align-items: center;       /* perfect horizontal centering */
-
+    justify-content: center;     /* vertical center */
+    align-items: center;         /* horizontal center */
     text-align: center;
+
     position: relative;
     color: white;
-}
-
-#hero-section .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 20px;
+    padding: 0;
 }
 
 #hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.25); /* subtle overlay */
+    background: rgba(0,0,0,0.25);
 }
 
-#hero-section .hero-content {
+.hero-content {
     position: relative;
     z-index: 2;
-    max-width: 720px;
+    max-width: 1300px;       /* give enough width for ONE LINE H1 */
+    padding: 0 20px;
 }
 
 #hero-section h1 {
