@@ -6,10 +6,14 @@
 /* --------------------------------
    0. RESET + GLOBAL BASE
 ---------------------------------- */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
 }
 
 html, body {
