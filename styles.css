@@ -313,29 +313,60 @@ p {
     margin-bottom: var(--space-lg);
 }
 
-.destination-grid {
-    margin-top: var(--space-md);
-}
+/* ------------------------------------------
+   FIXED DESTINATION GRID IMAGE + CARD STYLING
+   (for destinations.html)
+-------------------------------------------*/
 
 .destination-card {
-    background-color: var(--color-white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
+    display: block;
+    background: #ffffff;
+    padding: 0;                   /* remove extra padding around image */
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;            /* clean edges */
     transition: 0.3s ease;
 }
 
 .destination-card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
 }
 
-.placeholder-img {
+/* REAL IMAGE — replaces placeholder */
+.destination-card img {
     width: 100%;
-    height: 160px;
-    background-color: var(--color-mist-grey);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--space-md);
+    height: 180px;               /* perfect premium card size */
+    object-fit: cover;           /* keeps natural composition */
+    object-position: center;     /* fixes cropping */
+    display: block;
+    border-radius: 16px 16px 0 0;
+
+    /* REMOVE DARK / NAVY OVERLAY */
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    background: transparent !important;
+}
+
+/* Title + Description */
+.destination-card h3 {
+    margin: 16px 16px 6px;
+    font-size: 20px;
+    color: #1b5e68;
+}
+
+.destination-card p {
+    margin: 0 16px 20px;
+    color: #4b4b4b;
+    font-size: 15px;
+}
+
+/* REMOVE PLACEHOLDER FOREVER */
+.placeholder-img {
+    display: none !important;
+    background: transparent !important;
 }
 
 #december-featured {
