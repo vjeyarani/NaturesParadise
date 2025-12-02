@@ -867,3 +867,13 @@ D) Soft sky blue (#bfeaff) */
     font-size: 15px;
     line-height: 1.6;
 }
+
+/* Ultra-tight, premium spacing for Bali page */
+.bali-page section {
+    padding: 40px 0;   /* was 80–100px — now clean & modern */
+}
+
+/* For text-only sections like Best Time + Why Visit */
+.bali-page .tight-section {
+    padding: 28px 0;  /* super-clean Apple-style spacing */
+}
