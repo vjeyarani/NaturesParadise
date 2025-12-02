@@ -781,3 +781,53 @@ section:first-of-type {
     color: #ffffff; /* or whatever color you choose */
 }
 
+/* A) Teal (#0abb95)
+B) White (#ffffff)
+C) Gold luxury (#f3d9a6)
+D) Soft sky blue (#bfeaff) */
+
+/* Tighter spacing ONLY for Bali page */
+.bali-page section {
+    padding: 55px 0;    /* Reduced from 80px → perfect spacing */
+}
+
+/* Reduce extra space for sections with simple text */
+.bali-page #why-visit,
+.bali-page #best-time {
+    padding: 45px 0;
+}
+
+/* Hero stays independent */
+.bali-page .destination-hero {
+    padding: 0;
+}
+/* ==========================================
+   BALANCED, TIGHTER SPACING — ONLY FOR BALI
+   (52px golden ratio spacing)
+========================================== */
+
+.bali-page section {
+    padding: 52px 0;   /* ⭐ final tight-but-airy spacing */
+}
+
+/* Text-only sections (slightly tighter) */
+.bali-page #why-visit,
+.bali-page #best-time {
+    padding: 42px 0;   /* cleaner, less floating space */
+}
+
+/* Experience grid + Stay grid sections */
+.bali-page #top-experiences,
+.bali-page #where-to-stay {
+    padding: 52px 0;
+}
+
+/* CTA section (least spacing) */
+.bali-page section.text-center {
+    padding: 38px 0;
+}
+
+/* Hero remains as-is */
+.bali-page .destination-hero {
+    padding: 0;
+}
