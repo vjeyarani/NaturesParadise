@@ -89,7 +89,7 @@ p {
     border-bottom: 1px solid #eee;
     height: auto;                     /* allow flexible height */
     /* padding: 20px 0 18px;             /* TOP and BOTTOM space */
-    padding-top: 24px
+    padding-top: 24px;
     padding-bottom: 24px;
 }
 
