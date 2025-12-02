@@ -981,7 +981,7 @@ D) Soft sky blue (#bfeaff) */
     position: relative;
     height: 65vh;
     min-height: 420px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0;
     overflow: hidden;
 }
 .destination-hero img {
