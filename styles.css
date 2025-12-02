@@ -961,7 +961,22 @@ D) Soft sky blue (#bfeaff) */
     font-size: 18px;
     text-shadow: 0px 3px 10px rgba(0,0,0,0.4);
 }
+/* Maldives Hero - clean full width */
+.maldives-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+    border-radius: 0 !important;   /* no rounded corners */
+}
 
+.maldives-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.68);
+}
 .destination-hero {
     position: relative;
     height: 65vh;
@@ -978,15 +993,26 @@ D) Soft sky blue (#bfeaff) */
 
 .maldives-hero-text {
     position: absolute;
-    bottom: 60px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    max-width: 720px;
-    background: rgba(0,0,0,0.30);
-    padding: 28px 32px;
-    border-radius: 14px;
-    backdrop-filter: blur(6px);
+    color: #fff;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.maldives-hero-text h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 14px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+}
+
+.maldives-hero-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.45);
 }
 
 /* Section spacing fix */
