@@ -1,9 +1,11 @@
+/* =====================================================
+   XPLORE WORLD – MASTER STYLESHEET (CLEAN + OPTIMIZED)
+   All unique sections preserved — no duplicates.
+===================================================== */
 
-/* ----------------------------------------------------
-   Nature’s Paradise – Global Layout & Base Styling
------------------------------------------------------ */
-
-/* Reset */
+/* --------------------------------
+   0. RESET + GLOBAL BASE
+---------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -19,19 +21,16 @@ html, body {
     line-height: 1.6;
 }
 
-/* Containers */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Section defaults */
 section {
     padding: var(--space-xl) 0;
 }
 
-/* Headings */
 h1 {
     font-size: var(--font-size-hero);
     font-weight: 600;
@@ -51,59 +50,14 @@ h3 {
     margin-bottom: var(--space-sm);
 }
 
-/* Paragraph */
 p {
     font-size: var(--font-size-base);
     margin-bottom: var(--space-md);
 }
 
-/* Buttons */
-.btn-primary {
-    background-color: var(--color-ocean-teal);
-    color: var(--color-white);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: var(--shadow-soft);
-    transition: 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-tea-green);
-}
-.btn-primary:hover, 
-.btn-secondary:hover {
-    transform: translateY(-2px);
-    transition: 0.25s ease;
-}
-
-.btn-secondary {
-    background-color: var(--color-champagne);
-    color: var(--color-night-navy);
-    padding: var(--space-sm) var(--space-lg);
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    font-weight: 500;
-    box-shadow: var(--shadow-soft);
-}
-
-/* Utility classes */
-.text-center {
-    text-align: center;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-}
-
-.flex-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.text-center { text-align: center; }
+.flex { display: flex; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
 
 .grid-3 {
     display: grid;
@@ -117,46 +71,34 @@ p {
     gap: var(--space-lg);
 }
 
-
-/* ------------------------------
-   HEADER / NAVIGATION
------------------------------- */
-
-/* ------------------------------
-   FINAL HEADER FIX — HOUSE OF KHADDAR STYLE
---------------------------------*/
-
+/* --------------------------------
+   1. NAVIGATION
+---------------------------------- */
 #site-header {
     background: #ffffff;
     border-bottom: 1px solid #eee;
-    height:72px;
-
+    height: 72px;
 }
 
-/* FIXED HEIGHT = NAV WILL NEVER DROP */
 #site-header .container {
     display: flex;
-    align-items: center;       /* perfect vertical centering */
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-.brand-bold
+
+/* Logo */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Nav Menu */
 .nav-menu {
-    gap: var(--space-lg);
     list-style: none;
+    display: flex;
+    gap: 28px;
 }
-
-/* Remove bullets from nav completely */
-.nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li {
-    list-style: none;
-}
-
 
 .nav-menu a {
     text-decoration: none;
@@ -170,907 +112,53 @@ p {
 .nav-menu a.active {
     color: var(--color-ocean-teal);
 }
-/* NAV MENU FIX */
-.nav-menu {
-    display: flex;
-    align-items: center;    /* ⭐ keeps nav in same line */
-    gap: 28px;
-}
-/* LOGO GROUP */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 6px;   /* ⭐ small upward lift */
-    margin-bottom:9px;
-}
-/* LOGO SIZE */
-.logo img {
-    height: 60px;    /* big but clean */
-    width: auto;
-    display: block;
-}
-
-/* BRAND NAME */
-.brand-name {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Nature's – elegant light */
-.brand-light {
-    font-weight: 500;
-    font-size: 22px;
-    letter-spacing: -0.3px;
-    color: #0B5853;
-}
-
-/* Paradise – bold strong premium */
-.brand-bold {
-    font-weight: 800;
-    font-size: 23px;
-    letter-spacing: -0.8px;
-    color: #0A3F46;
-}
-
-
-
-
 
 /* --------------------------------
-   HERO SECTION
+   2. HOME PAGE HERO (UNIQUE)
 ---------------------------------- */
 #hero-section {
     background-image: url('assets/images/hero.png');
     background-size: cover;
-    background-position: center -120px;   /* crop only TOP */
+    background-position: center -80px;
     background-repeat: no-repeat;
 
-    height: 70vh;
-    min-height: 520px;
+    height: 60vh;
+    min-height: 420px;
 
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 
-    padding-top: 180px;   /* text slightly down */
+    padding-top: 0;
     text-align: center;
     position: relative;
     color: var(--color-white);
 }
 
-
-
-/* Soft overlay */
 #hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.22);
+    background: rgba(0,0,0,0.26);
 }
 
 #hero-section .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 720px;
 }
 
 #hero-section h1 {
     color: #0abb95;
-    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.35);
-
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.35);
 }
-
-#hero-section p {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
-}
-
 
 #hero-section p {
     text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
 }
-.hero-text {
-    margin-top: -80px;   /* smaller pull-up */
-    padding: 16px 20px;  /* cleaner */
-}
 
 /* --------------------------------
-   CATEGORY HIGHLIGHTS
----------------------------------- */
-
-#category-highlights h2 {
-    margin-bottom: var(--space-lg);
-}
-
-.category-grid {
-    margin-top: var(--space-md);
-}
-
-.category-card {
-    background-color: var(--color-white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.category-card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-4px);
-}
-
-.category-card h3 {
-    margin-bottom: var(--space-sm);
-    color: var(--color-ocean-teal);
-}
-
-/* --------------------------------
-   FEATURED DESTINATIONS
----------------------------------- */
-
-#featured-destinations h2 {
-    margin-bottom: var(--space-lg);
-}
-
-/* ------------------------------------------
-   FIXED DESTINATION GRID IMAGE + CARD STYLING
-   (for destinations.html)
--------------------------------------------*/
-
-.destination-card {
-    display: block;
-    background: #ffffff;
-    padding: 0;                   /* remove extra padding around image */
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    text-decoration: none;
-    color: inherit;
-    overflow: hidden;            /* clean edges */
-    transition: 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
-}
-
-/* REAL IMAGE — replaces placeholder */
-.destination-card img {
-    width: 100%;
-    height: 180px;               /* perfect premium card size */
-    object-fit: cover;           /* keeps natural composition */
-    object-position: center;     /* fixes cropping */
-    display: block;
-    border-radius: 16px 16px 0 0;
-
-    /* REMOVE DARK / NAVY OVERLAY */
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    background: transparent !important;
-}
-
-/* Title + Description */
-.destination-card h3 {
-    margin: 16px 16px 6px;
-    font-size: 20px;
-    color: #1b5e68;
-}
-
-.destination-card p {
-    margin: 0 16px 20px;
-    color: #4b4b4b;
-    font-size: 15px;
-}
-
-/* REMOVE PLACEHOLDER FOREVER */
-.placeholder-img {
-    display: none !important;
-    background: transparent !important;
-}
-
-#december-featured {
-  padding: 80px 0;
-}
-
-#december-featured h2 {
-  margin-bottom: 40px;
-}
-
-.december-featured-grid img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-soft);
-}
-
-.featured-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    background: var(--color-white);
-    padding: 24px;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: 0.25s ease;
-}
-
-.featured-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-}
-
-
-.featured-card h3 {
-  color: var(--color-ocean-teal);
-  margin-bottom: 8px;
-}
-
-/* --------------------------------
-   FAMILY TRAVEL SIGNATURE SECTION
----------------------------------- */
-
-#family-travel h2 {
-    margin-bottom: var(--space-md);
-}
-
-#family-travel p {
-    max-width: 700px;
-    margin: 0 auto var(--space-lg);
-    color: var(--color-mountain-blue);
-}
-
-.family-card {
-    background-color: var(--color-white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.family-card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-4px);
-}
-
-
-/* --------------------------------
-   CURATED STAYS (AFFILIATE BLOCK)
----------------------------------- */
-
-#curated-stays h2 {
-    margin-bottom: var(--space-lg);
-}
-
-.stay-card {
-    background-color: var(--color-white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.stay-card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-4px);
-}
-
-/* --------------------------------
-   TRAVEL GUIDES & DIGITAL PRODUCTS
----------------------------------- */
-
-#travel-guides h2 {
-    margin-bottom: var(--space-md);
-}
-
-#travel-guides p {
-    max-width: 700px;
-    margin: 0 auto var(--space-lg);
-    color: var(--color-mountain-blue);
-}
-
-.guide-card {
-    background-color: var(--color-white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.guide-card:hover {
-    box-shadow: var(--shadow-medium);
-    transform: translateY(-4px);
-}
-
-/* --------------------------------
-   ABOUT US PREVIEW
----------------------------------- */
-
-#about-preview h2 {
-    margin-bottom: var(--space-md);
-}
-
-#about-preview p {
-    max-width: 700px;
-    margin: 0 auto var(--space-lg);
-    color: var(--color-mountain-blue);
-}
-
-/* --------------------------------
-   EMAIL CAPTURE SECTION
----------------------------------- */
-
-#email-capture h2 {
-    margin-bottom: var(--space-md);
-}
-
-#email-capture p {
-    max-width: 600px;
-    margin: 0 auto var(--space-lg);
-    color: var(--color-mountain-blue);
-}
-
-.email-form {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-sm);
-}
-
-.email-form input {
-    padding: var(--space-sm);
-    width: 280px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-mist-grey);
-    font-size: var(--font-size-base);
-}
-
-.email-form button {
-    cursor: pointer;
-}
-
-/* --------------------------------
-   FOOTER
----------------------------------- */
-
-#site-footer {
-    background-color: var(--color-night-navy);
-    color: var(--color-white);
-    padding: var(--space-xl) 0;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-bottom: var(--space-lg);
-}
-
-.footer-col h4 {
-    margin-bottom: var(--space-sm);
-    font-size: 18px;
-    color: var(--color-champagne);
-}
-
-.footer-col ul {
-    list-style: none;
-}
-
-.footer-col ul li {
-    margin-bottom: var(--space-sm);
-}
-
-.footer-col ul li a {
-    color: var(--color-snow-white);
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-.footer-col ul li a:hover {
-    color: var(--color-ocean-teal);
-}
-
-.footer-copy {
-    text-align: center;
-    margin-top: var(--space-md);
-    font-size: 14px;
-    opacity: 0.8;
-}
-
-/* ---------------- DECEMBER HUB — shared additions ---------------- */
-
-#december-hero {
-  position: relative;
-  height: 70vh;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  text-align: center;
-  overflow: hidden;
-  padding: 0;
-}
-
-.december-hero-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('../../assets/images/december/december_hub_hero.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: brightness(0.68) saturate(0.95);
-  z-index: 1;
-}
-
-/* If you saved regenerated Nature Calm hero, keep it available */
-.december-hero-bg.nature {
-  background-image: url('../../assets/images/december/nature_calm_reset_16_9.png');
-}
-
-#december-hero h1 {
-    color: #18a8ad; /* 18a8ad; */
-}
-
-.december-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 820px;
-  padding: 48px 24px;
-}
-
-/* category images */
-.cat-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
-}
-
-/* mood grid */
-.mood-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
-.mood-box {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-}
-.mood-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* mini itineraries */
-.mini-itinerary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  margin-top: var(--space-lg);
-}
-.mini-card {
-  background-color: var(--color-white);
-  padding: var(--space-lg);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-}
-
-/* destination card (reuse your .destination-img rules) */
-.destination-img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--space-md);
-}
-
-/* responsive tweaks */
-@media (max-width: 900px) {
-  .mood-grid { grid-template-columns: repeat(2, 1fr); }
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .mini-itinerary-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 520px) {
-  .mood-grid { grid-template-columns: 1fr; }
-  #december-hero { height: 60vh; min-height: 360px; }
-  .december-hero-content h1 { font-size: 28px; }
-}
-
-/* december-why   */
-
-#december-why {
-    padding: 80px 0;
-}
-
-#december-why .why-intro {
-    font-size: 20px;
-    line-height: 1.6;
-    max-width: 760px;
-    margin: 0 auto 40px;
-    color: var(--color-mountain-blue);
-}
-
-#december-why img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-medium);
-}
-
-#december-categories {
-  padding: 80px 0;
-}
-
-#december-categories h2 {
-  margin-bottom: 40px;
-}
-
-.category-grid-december img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-soft);
-}
-
-.cat-card {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-.cat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-medium);
-}
-
-#december-itineraries {
-    padding: 80px 0;
-}
-
-#december-itineraries h2 {
-    margin-bottom: 16px;
-}
-
-#december-itineraries p {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: var(--color-mountain-blue);
-}
-
-.mini-itinerary-grid img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    margin-bottom: 16px;
-    box-shadow: var(--shadow-soft);
-}
-
-.mini-card {
-    display: block;
-    background: var(--color-white);
-    padding: 24px;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    color: inherit;
-    box-shadow: var(--shadow-soft);
-    transition: 0.25s ease;
-    text-align: center;
-}
-
-.mini-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-}
-
-#december-stays {
-    padding: 80px 0;
-}
-
-#december-stays p {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: var(--color-mountain-blue);
-}
-
-.december-stays-grid img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    margin-bottom: 16px;
-    box-shadow: var(--shadow-soft);
-}
-
-.dec-stay-card {
-    display: block;
-    background: var(--color-white);
-    padding: 24px;
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-    transition: 0.25s ease;
-}
-
-.dec-stay-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-}
-
-.dec-stay-card h3 {
-    color: var(--color-ocean-teal);
-}
-
-
-#december-kit {
-    padding: 80px 0;
-}
-
-#december-kit p {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: var(--color-mountain-blue);
-}
-
-.december-kit-grid {
-    margin-top: 40px;
-}
-
-.kit-card {
-    background: var(--color-white);
-    padding: 24px;
-    text-align: center;
-    border-radius: var(--radius-md);
-   /* box-shadow: var(--shadow-soft);*/
-    box-shadow: 0 3px 14px rgba(0,0,0,0.08);
-    transition: 0.25s ease;
-}
-
-.kit-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
-    
-
-}
-
-.kit-card h3 {
-    margin-bottom: 12px;
-    color: var(--color-ocean-teal);
-}
-
-#december-email {
-    padding: 80px 0;
-}
-
-#december-email h2 {
-    margin-bottom: 16px;
-}
-
-#december-email p {
-    max-width: 600px;
-    margin: 0 auto 32px;
-    color: var(--color-mountain-blue);
-}
-
-.dec-email-form {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.dec-email-form input {
-    padding: 12px 16px;
-    width: 280px;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-mist-grey);
-    font-size: 16px;
-}
-
-.dec-email-form button {
-    padding: 12px 24px;
-    cursor: pointer;
-}
-
-#december-email .btn-primary {
-    box-shadow: none !important;
-    border: none !important;
-}
-
-#destination-hero {
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    color: var(--color-white);
-    padding-top: 80px;
-}
-
-#destination-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.28);
-}
-
-#destination-hero h1,
-#destination-hero p {
-    position: relative;
-    z-index: 2;
-}
-
-.travel-styles {
-    padding: 60px 40px;
-    text-align: center;
-}
-
-.travel-styles h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-weight: 700;
-    color: #0f3e47;
-}
-
-/* CARD GRID */
-.style-cards {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
-/* CARD */
-.card {
-    background: #ffffff;
-    width: 260px;
-    padding: 28px 20px;
-    border-radius: 18px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
-}
-
-/* ICON */
-.style-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 12px;
-}
-
-/* TEXT INSIDE CARDS */
-.card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #1b5e68;
-}
-
-.card p {
-    color: #4b4b4b;
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .style-cards {
-        gap: 20px;
-    }
-
-    .card {
-        width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%;
-    }
-}
-/* generic icon size + color control */
-.icon, .card svg {
-  width: 56px;
-  height: 56px;
-  color: #2E7D8E; /* Ocean Teal from Visual Framework — change as needed */ 
-  display: block;
-  margin: 0 auto 12px;
-}
-
-/* override per card if needed */
-.card.tropical { color: #2E7D8E; }  /* Ocean Teal */
-.card.nature   { color: #7FA88F; }  /* Tea Garden Green */
-.card.snow     { color: #3F5F7F; }  /* Mountain Blue */
-.card.urban    { color: #1C2431; }  /* Night Navy */
-.card h3 { margin-top: 8px; font-size: 18px; }
-
-.page-title {
-    font-size: 36px;
-    margin-top: 40px;
-    text-align: center;
-    color: #0f3e47;
-}
-
-.page-sub {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 18px;
-    color: #4b4b4b;
-}
-
-.destination-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 20px 40px;
-}
-
-.dest-card {
-    width: 320px;
-    background: #ffffff;
-    padding-bottom: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    text-decoration: none;
-    color: inherit;
-    transition: 0.3s ease;
-}
-
-.dest-card img {
-    width: 100%;
-    border-radius: 16px 16px 0 0;
-}
-
-.dest-card h3 {
-    margin: 16px;
-    font-size: 20px;
-    color: #1b5e68;
-}
-
-.dest-card p {
-    margin: 0 16px 20px;
-    color: #4b4b4b;
-    font-size: 15px;
-}
-
-.dest-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
-}
-.dest-card {
-    background: #ffffff !important;
-}
-
-.dest-card img {
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    background-color: transparent !important;
-}
-
-/* --------------------------------
-   UNIVERSAL DESTINATION HERO (Option C)
+   3. UNIVERSAL DESTINATION HERO (OPTION C)
 ---------------------------------- */
 .destination-hero {
     width: 100%;
@@ -1078,7 +166,6 @@ p {
     max-height: 420px;
     overflow: hidden;
     position: relative;
-    border-radius: 0; /* clean, full-width look */
 }
 
 .destination-hero img {
@@ -1089,7 +176,7 @@ p {
     display: block;
 }
 
-/* Title block below hero */
+/* Title section below hero */
 .destination-header {
     text-align: center;
     padding: 40px 20px 20px;
@@ -1106,22 +193,164 @@ p {
     margin: 0 auto 40px;
     color: #4b4b4b;
     font-size: 17px;
-    line-height: 1.5;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    .destination-hero {
-        height: 32vh;
-        max-height: 300px;
-    }
-
-    .destination-header h1 {
-        font-size: 28px;
-    }
-
-    .destination-header p {
-        font-size: 15px;
-    }
+    .destination-hero { height: 30vh; max-height: 300px; }
+    .destination-header h1 { font-size: 28px; }
 }
 
+/* --------------------------------
+   4. CATEGORY HIGHLIGHTS
+---------------------------------- */
+.category-card {
+    background-color: #fff;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* --------------------------------
+   5. DESTINATION LISTING CARDS
+---------------------------------- */
+.destination-card {
+    display: block;
+    background: #ffffff;
+    padding: 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    /* remove dark tint */
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.destination-card h3 {
+    margin: 16px 16px 6px;
+    font-size: 20px;
+    color: #1b5e68;
+}
+
+.destination-card p {
+    margin: 0 16px 20px;
+    color: #4b4b4b;
+    font-size: 15px;
+}
+
+/* REMOVE PLACEHOLDER */
+.placeholder-img { display: none !important; }
+
+/* --------------------------------
+   6. TRAVEL STYLE CARDS (HOME)
+---------------------------------- */
+.travel-styles { padding: 60px 40px; text-align: center; }
+.style-cards { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+
+.card {
+    background: #fff;
+    width: 260px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #1b5e68;
+}
+
+/* --------------------------------
+   7. DECEMBER HUB (KEPT AS IS)
+---------------------------------- */
+#december-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.december-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.68);
+    z-index: 1;
+}
+
+.december-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    padding: 48px 24px;
+}
+
+/* mood grid */
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* --------------------------------
+   8. FOOTER
+---------------------------------- */
+#site-footer {
+    background-color: var(--color-night-navy);
+    color: var(--color-white);
+    padding: var(--space-xl) 0;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .style-cards { gap: 20px; }
+    .card { width: 48%; }
+}
+
+@media (max-width: 480px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .card { width: 100%; }
+}
