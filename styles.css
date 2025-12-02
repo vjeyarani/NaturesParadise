@@ -490,4 +490,49 @@ p {
     background-color: #0787ad;
     transform: translateY(-2px);
 }
+/* ======================================
+   HERO BUTTONS - PREMIUM ROUNDED STYLE
+======================================= */
+
+.hero-buttons {
+    margin-top: 28px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.hero-btn {
+    padding: 14px 30px;
+    border-radius: 16px;      /* perfect rounded corners */
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s ease;
+}
+
+/* PRIMARY BUTTON - TEAL */
+.btn-hero-primary {
+    background-color: #0abb95;
+    color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+.btn-hero-primary:hover {
+    background-color: #089a78;
+    transform: translateY(-2px);
+}
+
+/* SECONDARY BUTTON - WHITE BLEND */
+.btn-hero-secondary {
+    background-color: rgba(255,255,255,0.24);
+    color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    backdrop-filter: blur(2px);
+}
+
+.btn-hero-secondary:hover {
+    background-color: rgba(255,255,255,0.30);
+    transform: translateY(-2px);
+}
 
