@@ -74,11 +74,15 @@ p {
 /* --------------------------------
    1. NAVIGATION
 ---------------------------------- */
+
+
 #site-header {
     background: #ffffff;
     border-bottom: 1px solid #eee;
-    height: 72px;
+    height: auto;                     /* allow flexible height */
+    padding: 18px 0 14px;             /* TOP and BOTTOM space */
 }
+
 
 #site-header .container {
     display: flex;
