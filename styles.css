@@ -88,8 +88,15 @@ p {
     background: #ffffff;
     border-bottom: 1px solid #eee;
     height: auto;                     /* allow flexible height */
-    padding: 18px 0 14px;             /* TOP and BOTTOM space */
+    padding: 20px 0 18px;             /* TOP and BOTTOM space */
+
 }
+
+.nav-menu li a {
+    padding: 10px 16px; /* improve click area & increase height */
+    font-size: 17px;
+}
+
 
 
 #site-header .container {
