@@ -513,13 +513,13 @@ p {
 
 /* PRIMARY BUTTON - TEAL */
 .btn-hero-primary {
-    background-color: #0abb95;
+    background-color: #0a969b;
     color: white;
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
 }
 
 .btn-hero-primary:hover {
-    background-color: #089a78;
+    background-color: #0a969b;
     transform: translateY(-2px);
 }
 
