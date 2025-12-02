@@ -1032,3 +1032,34 @@ D) Soft sky blue (#bfeaff) */
     margin-right: 8px;
     margin-bottom: 8px;
 }
+
+/* GLOBAL HERO STANDARD */
+.destination-hero,
+#hero-section,
+.hero {
+    position: relative;
+    width: 100%;
+    height: 560px;       /* consistent height for all pages */
+    overflow: hidden;    /* ensures crisp straight edges */
+}
+
+.destination-hero img,
+#hero-section img,
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;   /* force NO rounded corners */
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 26px 32px;
+    background: rgba(0,0,0,0.35);   /* premium glass-dark overlay */
+    border-radius: 12px;
+    max-width: 860px;
+    text-align: center;
+    color: #fff;
+}
