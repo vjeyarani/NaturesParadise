@@ -1134,3 +1134,149 @@ D) Soft sky blue (#bfeaff) */
     color: #fff;
     text-shadow: 0 3px 12px rgba(0,0,0,0.35);
 }
+
+/* ---------------------------------------------------
+   PHUKET PAGE — SAFE PAGE-SPECIFIC STYLES
+   (Nothing here affects Maldives, Bali, Home, etc.)
+---------------------------------------------------- */
+
+/* Hero */
+.phuket-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 62vh;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.phuket-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(6,14,15,0.28); /* contrast shadow */
+}
+
+.phuket-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 960px;
+    padding: 16px 28px;
+}
+
+.phuket-hero-text h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 8px;
+    color: #e6f0ef;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+}
+
+.phuket-hero-text p {
+    font-size: 16px;
+    color: rgba(240,255,255,0.92);
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+
+/* Content wrapper */
+.phuket-content {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.phuket-section {
+    margin-bottom: 32px;
+}
+
+
+/* Chips */
+.phuket-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.phuket-chip {
+    background: #eefafa;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #186b70;
+}
+
+
+/* Itinerary cards */
+.phuket-itinerary-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.phuket-itinerary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.phuket-itinerary h3 {
+    color: #165a58;
+    margin-bottom: 8px;
+}
+
+
+/* Cards (experiences & stays) */
+.phuket-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.phuket-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+}
+
+.phuket-card-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 14px 14px 0 14px;
+}
+
+.phuket-card h3 {
+    font-size: 20px;
+    margin: 14px 20px 6px;
+    color: #145c5a;
+}
+
+.phuket-card p {
+    margin: 0 20px 20px;
+    color: #4b4b4b;
+}
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .phuket-card-row { grid-template-columns: repeat(2,1fr); }
+    .phuket-itinerary-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .phuket-card-row { grid-template-columns: 1fr; }
+    .phuket-card-img { height: 220px; }
+}
