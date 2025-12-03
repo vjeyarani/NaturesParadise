@@ -1,0 +1,66 @@
+/* -------------------------
+   AUSTRIA HERO
+------------------------- */
+
+#austria-hero {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+#austria-hero::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.35);
+}
+
+#austria-hero .hero-content {
+    position:relative;
+    z-index:2;
+}
+
+#austria-hero h1 {
+    font-size:42px;
+    margin-bottom:10px;
+    text-shadow:0 4px 12px rgba(0,0,0,0.45);
+}
+
+/* -------------------------
+   IMAGE CARD STYLES
+------------------------- */
+
+.austria-card-img {
+    width: 100%;
+    height: 240px;
+    border-radius:14px;
+    object-fit:cover;
+    margin-bottom:16px;
+}
+
+.experience-card,
+.stay-card {
+    background:#fff;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    transition:0.25s ease;
+}
+
+.experience-card:hover,
+.stay-card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 10px 26px rgba(0,0,0,0.1);
+}
+
+/* TEXT */
+h3 { color:#165a58; }
+

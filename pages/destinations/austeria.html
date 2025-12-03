@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Austria – Nature’s Paradise</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Austria – XPLORE WORLD</title>
 
+    <!-- GLOBAL STYLES -->
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../../tokens.css">
+
+    <!-- AUSTRIA PAGE SPECIFIC STYLES -->
+    <link rel="stylesheet" href="../../assets/styles/austria.css">
 </head>
 
 <body>
@@ -15,13 +19,13 @@
 <header id="site-header">
     <div class="container flex-between">
         <div class="logo">
-            <img src="../../assets/logo/XPLORE01.png" alt="NP Logo">
-       </div>
+            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
+        </div>
 
         <nav>
             <ul class="nav-menu flex">
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="../destinations.html" class="active">Destinations</a></li>
+                <li><a class="active" href="../destinations.html">Destinations</a></li>
                 <li><a href="../guides.html">Guides</a></li>
                 <li><a href="../stays.html">Stays</a></li>
                 <li><a href="../december/december-hub.html">December Hub</a></li>
@@ -32,29 +36,32 @@
     </div>
 </header>
 
+
+
 <!-- HERO -->
-<section id="destination-hero" style="background-image: url('../../assets/images/austria_16_9.png');">
-    <div class="container text-center">
+<section id="austria-hero" style="background-image:url('../../assets/images/destinations/austria_hero_16_9.png');">
+    <div class="hero-content">
         <h1>Austria</h1>
         <p>Winter glow, cozy villages & scenic alpine charm.</p>
     </div>
 </section>
 
-<!-- OVERVIEW -->
-<section id="destination-overview">
+
+
+<!-- WHY VISIT -->
+<section>
     <div class="container">
         <h2>Why Visit Austria?</h2>
 
         <p>
-            Austria blends European elegance with peaceful winter scenery — cozy wooden homes, 
-            warm cafés, gentle snowfall, Christmas markets, and calm alpine towns. It’s the 
-            perfect destination for families seeking a quiet, beautiful winter holiday.
+            Austria blends European elegance with peaceful winter scenery — snowy rooftops,
+            warm cafés, Christmas markets and calm alpine towns. It’s the perfect destination
+            for families seeking a quiet, beautiful winter holiday.
         </p>
 
         <p>
-            From Vienna’s historic charm to Salzburg’s musical magic and the snowy peaks of 
-            Hallstatt and Innsbruck, Austria feels cinematic — and incredibly comforting. 
-            Everything is clean, simple, friendly, and safe for family travel.
+            From Vienna’s historic charm to Salzburg’s musical magic and the snowy peaks of
+            Hallstatt and Innsbruck, Austria feels cinematic, warm and welcoming.
         </p>
     </div>
 </section>
@@ -62,28 +69,37 @@
 
 
 <!-- TOP EXPERIENCES -->
-<section id="top-experiences">
+<section>
     <div class="container">
         <h2>Top Experiences in Austria</h2>
 
-        <div class="grid-3 experience-grid">
+        <div class="grid-3">
 
+            <!-- Experience 1 -->
             <div class="experience-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_exp_hallstatt_4_5.png" 
+                     alt="Hallstatt Lake Walk">
                 <h3>Hallstatt Lake Walk</h3>
-                <p>Snowy lake views, quiet streets, and iconic postcard-perfect mountains.</p>
+                <p>Snowy lake views, quiet streets & postcard-perfect mountains.</p>
             </div>
 
+            <!-- Experience 2 -->
             <div class="experience-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_exp_christmasmarket_4_5.png" 
+                     alt="Vienna Christmas Market">
                 <h3>Vienna Christmas Market</h3>
-                <p>Warm food, lights, music, and festive winter charm for families.</p>
+                <p>Warm lights, festive food & magical winter ambience for families.</p>
             </div>
 
+            <!-- Experience 3 -->
             <div class="experience-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_exp_innsbruck_4_5.png" 
+                     alt="Innsbruck Snow Villages">
                 <h3>Innsbruck Snow Villages</h3>
-                <p>Colorful alpine homes, soft snowfall, and peaceful mountain views.</p>
+                <p>Colorful alpine homes, soft snowfall & scenic mountain views.</p>
             </div>
 
         </div>
@@ -93,7 +109,7 @@
 
 
 <!-- FAMILY TIPS -->
-<section id="family-tips">
+<section>
     <div class="container">
         <h2>Family Travel Tips for Austria</h2>
 
@@ -108,31 +124,39 @@
 
 
 
-<!-- STAY RECOMMENDATIONS -->
-<section id="recommended-stays">
+<!-- STAYS -->
+<section>
     <div class="container">
         <h2>Where to Stay</h2>
 
-        <div class="grid-3 stay-grid">
+        <div class="grid-3">
 
+            <!-- Stay 1 -->
             <div class="stay-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_stay_chalet_4_5.png" 
+                     alt="Alpine Chalet">
                 <h3>Alpine Chalets</h3>
                 <p>Wooden interiors, warm lighting & peaceful snowy mornings.</p>
             </div>
 
+            <!-- Stay 2 -->
             <div class="stay-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_stay_lake_4_5.png" 
+                     alt="Lakefront Hotel">
                 <h3>Lakefront Hotels</h3>
-                <p>Cozy rooms with misty lake views & magical winter reflections.</p>
+                <p>Cozy rooms with misty lake reflections & magical winter views.</p>
             </div>
 
+            <!-- Stay 3 -->
             <div class="stay-card">
-                <div class="placeholder-img" style="background-image:url('../../assets/images/austria_vertical_4_5.png');"></div>
+                <img class="austria-card-img" 
+                     src="../../assets/images/destinations/austria_stay_boutique_4_5.png" 
+                     alt="Boutique City Hotel">
                 <h3>City Boutique Stays</h3>
                 <p>Perfect for families exploring Vienna & Salzburg comfortably.</p>
             </div>
-
         </div>
     </div>
 </section>
@@ -140,18 +164,64 @@
 
 
 <!-- CTA -->
-<section id="destination-cta">
+<section>
     <div class="container text-center">
         <h2>Ready for Your Austria Escape?</h2>
-        <a href="../december/december-hub.html" class="btn-primary">Get December Family Kit</a>
+        <a href="../../assets/kits/December-Family-Kit.pdf" class="btn-primary">Get December Family Kit</a>
     </div>
 </section>
 
 
+
 <!-- FOOTER -->
-<footer id="site-footer">
-    <div class="container">
-        <p class="footer-copy">© 2025 XPLORE WORLD. All Rights Reserved.</p>
+<footer id="premium-footer">
+
+    <div class="footer-container">
+
+        <!-- Column 1: Logo & Tagline -->
+        <div class="footer-col">
+            <img src="../../../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
+            <p class="footer-tagline">A Premium Travel Platform</p>
+        </div>
+
+        <!-- Column 2: Destinations -->
+        <div class="footer-col">
+            <h4>Destinations</h4>
+            <ul>
+                <li><a href="../destinations.html">All Destinations</a></li>
+                <li><a href="bali.html">Bali</a></li>
+                <li><a href="maldives.html">Maldives</a></li>
+                <li><a href="switzerland.html">Switzerland</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Explore -->
+        <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="stays.html">Stays</a></li>
+                <li><a href="../december/december-hub.html">December Hub</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Social -->
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <ul class="social">
+                <li><a href="#"><span>🌐</span> Website</a></li>
+                <li><a href="#"><span>📸</span> Instagram</a></li>
+                <li><a href="#"><span>📌</span> Pinterest</a></li>
+                <li><a href="#"><span>✉️</span> Email</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+        <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
 
