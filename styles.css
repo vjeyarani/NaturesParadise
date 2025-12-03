@@ -117,7 +117,7 @@ p {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 28px;
+    gap: 26px;
 }
 
 .nav-menu a {
