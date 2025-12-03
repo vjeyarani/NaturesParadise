@@ -95,9 +95,9 @@ p {
 }
 
 .nav-menu li a {
-    padding: 10px 16px; /* improve click area & increase height */
-    margin: 0 18px;   /* you can adjust spacing */
-    font-size: 15px;
+    padding: 8px 8%; /* improve click area & increase height */
+    margin: 0 3px;   /* you can adjust spacing */
+    font-size: 18px;
 }
 
 
