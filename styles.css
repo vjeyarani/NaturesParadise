@@ -808,6 +808,7 @@ D) Soft sky blue (#bfeaff) */
     padding: 55px 0;    /* Reduced from 80px → perfect spacing */
 }
 
+
 /* Reduce extra space for sections with simple text */
 .bali-page #why-visit,
 .bali-page #best-time {
@@ -1281,4 +1282,8 @@ D) Soft sky blue (#bfeaff) */
 @media (max-width: 600px) {
     .phuket-card-row { grid-template-columns: 1fr; }
     .phuket-card-img { height: 220px; }
+}
+
+.phuketi-page section {
+    padding: 55px 0;    /* Reduced from 80px → perfect spacing */
 }
