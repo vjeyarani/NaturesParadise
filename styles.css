@@ -90,13 +90,13 @@ p {
     border-bottom: 1px solid rgba(0,0,0,0.08);
     height: auto;                     /* allow flexible height */
     /* padding: 20px 0 18px;             /* TOP and BOTTOM space */
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .nav-menu li a {
     padding: 10px 16px; /* improve click area & increase height */
-    font-size: 17px;
+    font-size: 15px;
 }
 
 
