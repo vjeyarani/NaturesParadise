@@ -30,10 +30,15 @@
 
 #austria-hero h1 {
     font-size:42px;
+    color: #ffffff;
     margin-bottom:10px;
     text-shadow:0 4px 12px rgba(0,0,0,0.45);
 }
-
+.austra-hero-text p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
 /* -------------------------
    IMAGE CARD STYLES
 ------------------------- */
