@@ -4,8 +4,8 @@
 
 #coorg-hero {
     width:100%;
-    height: 68vh;
-    background-image: url('../../assets/images/destinations/coorg_chelavara_falls_16_9.png');
+    height: 70vh;
+    background-image: url('../../assets/images/destinations/coorg_16_9.png');
     background-size: cover;
     background-position: center center;
     display:flex;
@@ -33,7 +33,6 @@
     font-weight: 700;
     white-space: nowrap;      /* ❗ force one line */
     font-size: 56px;
-    font-weight: 700;
     line-height: 1.1;
     letter-spacing:0cqh; 
     margin-top: 36px;
@@ -52,7 +51,7 @@
 }
 
 .coorg-section {
-    margin-bottom:20px;
+    margin-bottom:4px;
 }
 
 /* GRID */

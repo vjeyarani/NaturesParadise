@@ -70,7 +70,7 @@
 }
 .singapore-hero-text h1 {
     color: #eff2f5;
-    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    text-shadow: 0 6px 18px rgba(224, 59, 59, 0.45);
     font-weight: 700;
     white-space: nowrap;      /* ❗ force one line */
     font-size: 58px;
