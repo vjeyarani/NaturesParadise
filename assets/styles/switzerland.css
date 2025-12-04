@@ -1,17 +1,22 @@
 /* ---------------------------------------
-   SWITZERLAND — page-specific styles
+   SWITZERLAND — page-specific sles
    (save as assets/styles/switzerland.css)
 ----------------------------------------- */
 /* HERO */
 
 #switzerland-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position:relative;
+    height: calc(100vh - 72px);  /* exact full-height minus navbar */
+    min-height: 520px;
+
+    display: flex;
+    justify-content: center;     /* vertical center */
+    align-items: center;         /* horizontal center */
     width: 100%;
     height: 70vh;
-    min-height: 420px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
     display:flex;
     align-items:center;
     justify-content:center;
