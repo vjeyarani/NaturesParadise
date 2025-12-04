@@ -3,15 +3,17 @@
 ------------------------------- */
 
 #coorg-hero {
-    height: 70vh;
-    background-image: url('../../assets/images/destinations/coorg_16_9.png');
+    width:100%;
+    height: 68vh;
+    background-image: url('../../assets/images/destinations/coorg_chelavara_falls_16_9.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     display:flex;
     align-items:center;
     justify-content:center;
     position:relative;
-    min-height: 520px;;
+    height: calc(100vh - 72px);  /* exact full-height minus navbar */
+    min-height: 520px;
 }
 
 #coorg-hero::before {
