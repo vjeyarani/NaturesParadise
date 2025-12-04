@@ -72,3 +72,21 @@
 h3 {
     color: #165a58;
 }
+.vancouver-content {
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+.vamcouver-section {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    align-items: center;
+    padding-top: 0px;
+}
+.vancouver-page section {
+    padding-top: 0% 0;    /* Reduced from 80px → perfect spacing */
+}
+.vancouver-page .tight-section {
+    padding: 10px 0;  /* super-clean Apple-style spacing */
+}
