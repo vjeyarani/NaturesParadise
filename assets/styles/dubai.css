@@ -1,0 +1,103 @@
+/* ---------------------------------------
+   DUBAI PAGE — page-specific styles
+   Save: assets/styles/dubai.css
+----------------------------------------- */
+
+/* HERO */
+#dubai-hero {
+    width: 100%;
+    height: 70vh;
+    min-height: 420px;
+    background-image: url('../../assets/images/destinations/dubai_16_9.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+#dubai-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(6,14,21,0.28); /* subtle darken for text contrast */
+}
+
+#dubai-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 14px 22px;
+}
+
+#dubai-hero h1 {
+    font-size: clamp(30px, 4.2vw, 48px);
+    margin-bottom: 8px;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    letter-spacing: -0.4px;
+    font-weight:700;
+}
+
+#dubai-hero p {
+    margin:0;
+    font-size:16px;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+/* CONTENT WRAPPER - slightly tighter spacing like other pages */
+.dubai-content {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.dubai-section { margin-bottom: 28px; }
+
+/* CARD IMAGES */
+.dubai-card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    display:block;
+}
+
+/* CARD STYLES (experiences + stays) */
+.dubai-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.dubai-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.dubai-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Typography color for headings inside cards */
+.dubai-card h3 { color: #123f45; margin-top: 8px; }
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .dubai-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .dubai-grid-3 { grid-template-columns: 1fr; }
+    #dubai-hero { height: 56vh; min-height: 340px; }
+}

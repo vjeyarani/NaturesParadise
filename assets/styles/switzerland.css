@@ -3,63 +3,67 @@
    (save as assets/styles/switzerland.css)
 ----------------------------------------- */
 /* HERO */
-
 #switzerland-hero {
+    width: 100%;
+    height: 72vh;
+    margin: 0;
+    padding:20px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    position:relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     height: calc(100vh - 72px);  /* exact full-height minus navbar */
     min-height: 520px;
-
-    display: flex;
-    justify-content: center;     /* vertical center */
-    align-items: center;         /* horizontal center */
-    width: 100%;
-    height: 70vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color: #ffffff;
 }
 
-#switzerland-hero::before {
+.switzerland-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.36);
+    background: rgba(6,14,15,0.28); /* contrast shadow */
 }
 
-#switzerland-hero .hero-content {
+.switzerland-hero-text {
     position: relative;
     z-index: 2;
+    text-align: center;
+    max-width: 960px;
+    padding: 8px 24px;
 }
 
-#switzerland-hero h1 {
-    font-size: 44px;
-    margin-bottom: 8px;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+.switzerland-hero-text h1 {
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+    white-space: nowrap;      /* ❗ force one line */
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
 }
 
-.switzerland-section {
-    margin-top: 0px;
-    margin-bottom: 32px;
-    align-items: center;
-    padding-top: 0px;
+.switzerland-hero-text p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
 }
 .switzerland-page section {
     padding-top: 0% 0;    /* Reduced from 80px → perfect spacing */
+    padding-bottom: 20% 14px;
 }
 .switzerland-page .tight-section {
-    padding: 10px 0;  /* super-clean Apple-style spacing */
+    padding: 0% 0;  /* super-clean Apple-style spacing */
 }
 
 /* CONTENT WRAPPER */
 .switzerland-content {
     max-width: 1100px;
-    margin: 28px auto;
-    padding: 0 20px;
+    margin: 14px auto;
+    padding: 0;
 }
 
 /* CARD IMAGES */
