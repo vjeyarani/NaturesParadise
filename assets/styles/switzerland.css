@@ -1,0 +1,99 @@
+/* ---------------------------------------
+   SWITZERLAND — page-specific styles
+   (save as assets/styles/switzerland.css)
+----------------------------------------- */
+/* HERO */
+
+#switzerland-hero {
+    width: 100%;
+    height: 70vh;
+    min-height: 420px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color: #ffffff;
+}
+
+#switzerland-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.36);
+}
+
+#switzerland-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+#switzerland-hero h1 {
+    font-size: 44px;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+}
+
+.switzerland-section {
+    margin-top: 0px;
+    margin-bottom: 32px;
+    align-items: center;
+    padding-top: 0px;
+}
+.switzerland-page section {
+    padding-top: 0% 0;    /* Reduced from 80px → perfect spacing */
+}
+.switzerland-page .tight-section {
+    padding: 10px 0;  /* super-clean Apple-style spacing */
+}
+
+/* CONTENT WRAPPER */
+.switzerland-content {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+/* CARD IMAGES */
+.switzerland-card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 16px;
+}
+
+/* CARD STYLES */
+.switzerland-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.switzerland-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.switzerland-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* small screens */
+@media (max-width: 1000px) {
+    .switzerland-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .switzerland-grid-3 { grid-template-columns: 1fr; }
+    #switzerland-hero { height: 56vh; min-height: 360px; }
+}
