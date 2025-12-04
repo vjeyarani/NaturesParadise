@@ -1,0 +1,77 @@
+/* ------------------------------
+   GOA — Page-Specific Styles
+------------------------------- */
+
+#goa-hero {
+    height: 70vh;
+    background-image: url('../../assets/images/destinations/goa_16_9.png');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    position:relative;
+}
+
+#goa-hero::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.28);
+}
+
+#goa-hero .hero-content {
+    position:relative;
+    z-index:2;
+}
+
+.goa-content {
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.goa-section {
+    margin-bottom:40px;
+}
+
+/* GRID */
+.goa-grid-3 {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.goa-card {
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:0.25s ease;
+    text-align:center;
+}
+
+.goa-card:hover {
+    transform: translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.goa-img {
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:14px;
+    margin-bottom:16px;
+}
+
+/* MOBILE */
+@media (max-width:900px){
+    .goa-grid-3 { grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:600px){
+    .goa-grid-3 { grid-template-columns:1fr; }
+    #goa-hero { height:56vh; }
+}
