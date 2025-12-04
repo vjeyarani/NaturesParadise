@@ -1,0 +1,93 @@
+/* ------------------------------
+   COORG — Page-specific styles
+------------------------------- */
+
+#coorg-hero {
+    height: 70vh;
+    background-image: url('../../assets/images/destinations/coorg_16_9.png');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    min-height: 520px;;
+}
+
+#coorg-hero::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.28);
+}
+
+#coorg-hero .hero-content {
+    position:relative;
+    z-index:2;
+}
+.coorg-hero-text h1 {
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+    white-space: nowrap;      /* ❗ force one line */
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing:0cqh; 
+    margin-top: 36px;
+}
+
+.coorg-hero-text p {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+.coorg-content {
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.coorg-section {
+    margin-bottom:20px;
+}
+
+/* GRID */
+.coorg-grid-3 {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.coorg-card {
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    transition:0.25s ease;
+    text-align:center;
+}
+
+.coorg-card:hover {
+    transform: translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.coorg-img {
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:14px;
+    margin-bottom:16px;
+}
+
+/* MOBILE */
+@media (max-width:900px){
+    .coorg-grid-3 { grid-template-columns:1fr 1fr; }
+}
+
+@media (max-width:600px){
+    .coorg-grid-3 { grid-template-columns:1fr; }
+    #coorg-hero { height:56vh; }
+}

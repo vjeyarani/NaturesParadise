@@ -11,8 +11,10 @@
     align-items:center;
     justify-content:center;
     text-align:center;
-    color:#fff;
+    color:#ffffff;
     position:relative;
+    height: calc(100vh - 72px);  /* exact full-height minus navbar */
+    min-height: 520px;
 }
 
 #singapore-hero::before {
@@ -66,6 +68,24 @@
     border-radius:14px;
     margin-bottom:16px;
 }
+.singapore-hero-text h1 {
+    color: #eff2f5;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+    white-space: nowrap;      /* ❗ force one line */
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing:0cqmin; 
+    margin-top: 36px;
+}
+
+.singapore-hero-text p {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
 
 /* MOBILE */
 @media (max-width:900px){
