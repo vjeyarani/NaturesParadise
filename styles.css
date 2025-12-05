@@ -150,7 +150,6 @@ p {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-
     height: calc(100vh - 72px);  /* exact full-height minus navbar */
     min-height: 520px;
 
@@ -1036,8 +1035,8 @@ D) Soft sky blue (#bfeaff) */
 
 /* Section spacing fix */
 .destination-section {
-    max-width: 1100px;
-    margin: 50px auto;
+    max-width: 1000px;
+    margin: 30px auto;
     padding: 14px 20px;
 }
 
