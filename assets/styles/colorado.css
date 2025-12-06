@@ -1,0 +1,223 @@
+/* ----------------------------------------------
+   COLORADO — Self-contained Destination Styles
+   Depends ONLY on tokens.css (for colors + fonts)
+----------------------------------------------- */
+
+/* ====== RESET & BASE TYPOGRAPHY (Local) ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-snow-white);
+    color: var(--color-night-navy);
+    line-height: 1.6;
+}
+
+/* Local container */
+.colorado-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Local text utilities */
+.text-center {
+    text-align: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: var(--font-size-hero);
+    margin-bottom: var(--space-sm);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+/* SECTION WRAPPER */
+.colorado-section {
+    padding: var(--space-xl) 0;
+}
+
+/* ============================================
+   HERO SECTION (Self-contained, no dependency)
+============================================ */
+#colorado-hero {
+    height: 70vh;
+    background-image: url('../../assets/images/destinations/colorado/colorado_16_9.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    text-align: center;
+    min-height: 520px;
+}
+
+#colorado-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.30);
+}
+.colorado-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 960px;
+    padding: 8px 24px;
+}
+
+.colorado-hero-text h1 {
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+    white-space: nowrap;      /* ❗ force one line */
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.colorado-hero-text p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+.colorado-hero {
+    position: relative;
+    height: 65vh;
+    min-height: 520px;
+    border-radius: 0;
+    overflow: hidden;
+}
+.colorado-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.colorado-page section {
+    padding-top: 0% 0;    /* Reduced from 80px → perfect spacing */
+    padding-bottom: 20% 14px;
+}
+.colorado-page .tight-section {
+    padding: 0% 0;  /* super-clean Apple-style spacing */
+}
+
+#colorado-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;       /* give enough width for ONE LINE H1 */
+    padding: 0 20px;
+}
+}
+
+/* ============================================
+   GRID LAYOUT (Self-contained)
+============================================ */
+.colorado-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ============================================
+   CARDS (Base card system for Colorado)
+============================================ */
+.colorado-card {
+    background: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.colorado-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Card image */
+.colorado-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   CTA BUTTON (Local copy of btn-primary)
+============================================ */
+.btn-primary {
+    background-color: var(--color-ocean-teal);
+    color: var(--color-white);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    box-shadow: var(--shadow-soft);
+    transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-tea-green);
+}
+
+/* ============================================
+   TIPS LIST (Self-contained)
+============================================ */
+.tips-list {
+    list-style: disc;
+    margin-left: 24px;
+    color: var(--color-night-navy);
+}
+
+.tips-list li {
+    margin-bottom: 8px;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 900px) {
+    .colorado-grid-3 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .colorado-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    #colorado-hero {
+        height: 56vh;
+    }
+}
