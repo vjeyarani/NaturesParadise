@@ -1342,4 +1342,140 @@ D) Soft sky blue (#bfeaff) */
     }
 }
 
+/* =======================================================
+   UNIVERSAL GRID SYSTEM (Responsive 2 / 3 / 4 Columns)
+   Global — Used across Home, Destinations, Hub
+   Safe for ALL destinations — Non-page-specific
+======================================================= */
+
+/* ---- GRID-2 ---- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- GRID-3 ---- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- GRID-4 (New — Responsive) ---- */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobiles */
+@media (max-width: 520px) {
+    .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr !important; }
+}
+
+/* =======================================================
+   GLOBAL DESTINATION CARD SYSTEM
+======================================================= */
+
+.experience-card,
+.stay-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    padding: 0 0 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.experience-card:hover,
+.stay-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+/* Card image */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px 18px 0 0;
+    display: block;
+}
+
+.experience-card h3,
+.stay-card h3 {
+    margin: 16px 16px 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #11666d; /* premium teal tone */
+}
+
+.experience-card p,
+.stay-card p {
+    margin: 0 16px 16px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =======================================================
+   GLOBAL DESTINATION SECTION SPACING
+======================================================= */
+.destination-section {
+    padding: 60px 0;
+}
+
+.destination-section.tight {
+    padding: 36px 0;
+}
+
+
+
+
+/* ----- UNIVERSAL CARD BASE ----- */
+.card-base {
+    background: #ffffff;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.25s ease;
+}
+
+.card-base:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ----- UNIVERSAL CARD IMAGE ----- */
+.card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+/* ----- UNIVERSAL TIPS LIST ----- */
+.tips-list {
+    list-style: disc;
+    margin-left: 24px;
+    color: var(--color-night-navy);
+}
+
+.tips-list li {
+    margin-bottom: 8px;
+}
 
