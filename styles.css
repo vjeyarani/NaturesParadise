@@ -286,7 +286,7 @@ p {
 .destination-card h3 {
     margin: 16px 16px 6px;
     font-size: 20px;
-    color: #1b5e68;
+    color: #16777b;
 }
 
 .destination-card p {
@@ -875,7 +875,7 @@ D) Soft sky blue (#bfeaff) */
 
 .bali-page .experience-img-card h3 {
     margin: 14px 16px 8px;
-    color: #11666d;
+    color: #11888b; 
     font-size: 20px;
 }
 
@@ -1479,3 +1479,59 @@ D) Soft sky blue (#bfeaff) */
     margin-bottom: 8px;
 }
 
+/**** About & Trust Page Styles ****/
+/* ======================================================
+   XPLORE WORLD – ITINERARY CTA BUTTON GROUP
+   For 3-Day / 5-Day / 7-Day Plans
+====================================================== */
+
+/* Wrapper */
+.itinerary-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive row */
+.itinerary-btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.itinerary-btn {
+    padding: 14px 26px;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #0f6385;              /* your premium teal */
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: 0.25s ease;
+}
+
+.itinerary-btn:hover {
+    background: #0c516d;
+    transform: translateY(-2px);
+}
+
+/* Secondary CTA under it */
+.itinerary-secondary-link {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 16px;
+    color: #0f6385;
+    font-weight: 500;
+}
+
+/* MOBILE */
+@media(max-width: 520px) {
+    .itinerary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
