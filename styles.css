@@ -163,6 +163,7 @@ p {
     padding: 0;
 }
 
+
 #hero-section::before {
     content: "";
     position: absolute;
@@ -174,6 +175,16 @@ p {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.1;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255,215,178,0.28),
+        rgba(0,0,0,0.18)
+    );
+    z-index: 1;
 }
 .hero-content {
     position: relative;
@@ -1052,34 +1063,82 @@ D) Soft sky blue (#bfeaff) */
 }
 
 /* GLOBAL HERO STANDARD */
+/* ====================================================
+   GLOBAL HERO STANDARD — responsive & accessible
+   Replaces the fixed 560px rule with clamp() + overlay
+==================================================== */
+
 .destination-hero,
 #hero-section,
 .hero {
     position: relative;
     width: 100%;
-    height: 560px;       /* consistent height for all pages */
-    overflow: hidden;    /* ensures crisp straight edges */
+    height: clamp(320px, 60vh, 560px); /* responsive: min 320px, ideal 60vh, max 560px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* ensure hero image covers and stays crisp */
 .destination-hero img,
 #hero-section img,
 .hero img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0 !important;   /* force NO rounded corners */
+    object-position: center;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
-.hero-text {
+
+/* subtle standardized overlay layer for readability */
+.destination-hero::before,
+#hero-section::before,
+.hero::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 26px 32px;
-    background: rgba(0,0,0,0.35);   /* premium glass-dark overlay */
-    border-radius: 12px;
-    max-width: 860px;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.14));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* hero text container sits above the overlay */
+.hero-text,
+.destination-hero .hero-content,
+#hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 960px;
     text-align: center;
-    color: #fff;
+    color: #fff; /* safe default for overlayed text */
+}
+
+/* small-screen adjustments */
+@media (max-width: 900px) {
+    .destination-hero,
+    #hero-section,
+    .hero {
+        height: clamp(280px, 45vh, 420px);
+    }
+    .hero-text { padding: 18px; }
+    .hero-content h1 { font-size: clamp(22px, 5.2vw, 36px); }
+}
+
+/* very small screens */
+@media (max-width: 520px) {
+    .destination-hero,
+    #hero-section,
+    .hero {
+        height: clamp(220px, 42vh, 360px);
+    }
+    .hero-text { padding: 14px; }
+    .hero-content h1 { font-size: 20px; line-height: 1.15; white-space: normal; }
 }
 /* MALDIVES PAGE — CARD IMAGE FIX */
 .dd img {
@@ -1535,3 +1594,41 @@ D) Soft sky blue (#bfeaff) */
         text-align: center;
     }
 }
+/* ABOUT PAGE – TIGHT PREMIUM SPACING */
+.about-page section {
+    padding: 24px 0 !important;
+}
+
+.about-page .tight-section {
+    padding: 6px 0 !important;
+}
+
+.about-page h2 {
+    margin-bottom: 10px !important;
+}
+
+.about-page p {
+    margin-bottom: 10px !important;
+}
+/* Remove extra spacing after final CTA on About Page */
+/* Remove extra white space under the final CTA on About Page */
+/* Completely remove extra white space below final CTA on About Page */
+.about-page #final-cta {
+    padding-top: 0 !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.about-page #final-cta.container {
+    padding-bottom: 0 !important;
+    margin-bottom: 16px !important;
+}
+.about-page footer {
+    padding-top: 8px !important;
+    margin-top: 10px !important;
+}
+/* ensure inner elements don't add extra padding */
+
+
+
