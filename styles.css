@@ -1615,6 +1615,7 @@ D) Soft sky blue (#bfeaff) */
 /* Completely remove extra white space below final CTA on About Page */
 .about-page #final-cta {
     padding-top: 0 !important;
+    color:#FFFFFF;
     padding-bottom: 16px !important;
     margin-bottom: 0 !important;
     margin-top: 0 !important;
