@@ -67,8 +67,16 @@ p {
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
+    gap: 32px;
 }
+/* for mobile ***/
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -586,11 +594,12 @@ p {
     margin-top: 40px;
 }
 
+
 /* EACH CARD */
 .dest-card,
 .destination-card {
     background: #ffffff;
-    padding: 0 0 20px;
+    padding: 16px;  /* 👈 space INSIDE card */
     border-radius: 16px;
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     text-decoration: none;
@@ -622,7 +631,7 @@ p {
 /* TITLE */
 .dest-card h3,
 .destination-card h3 {
-    margin: 16px;
+    margin: 0 0 8px;
     font-size: 20px;
     font-weight: 600;
     color: #11666d; /* premium teal */
@@ -1626,8 +1635,8 @@ D) Soft sky blue (#bfeaff) */
     margin-bottom: 16px !important;
 }
 .about-page footer {
-    padding-top: 8px !important;
-    margin-top: 10px !important;
+    padding-top: 18px !important;
+    margin-top: 12px !important;
 }
 /* HERO OVERLAY — Sunrise, positive, light */
 /* About page hero overlay only */
@@ -1652,5 +1661,38 @@ D) Soft sky blue (#bfeaff) */
     text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
 }
 
+/* DESTINATION LIST IMAGE FIX */
+.destination-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
 
+.dest-card {
+    text-decoration: none;
+    color: inherit;
+}
 
+.dest-card img {
+    width: 100%;
+    height: 280px;          /* 👈 fixes oversized images */
+    object-fit: cover;      /* 👈 clean crop */
+    border-radius: 16px;
+    display: block;
+}
+
+.dest-card h3 {
+    margin: 12px 0 4px;
+}
+
+.dest-card p {
+    margin: 0;
+    color: #555;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dest-card img {
+        height: 200px;
+    }
+}

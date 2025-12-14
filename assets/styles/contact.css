@@ -3,8 +3,7 @@
   background: #ffffff;
   color: #111111;
   line-height: 1.6;
-  min-height: 100vh;
-}
+ }
 
 .contact-page .container {
   max-width: 720px;
@@ -15,7 +14,7 @@
 .contact-page h1 {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .contact-page .subtitle {
@@ -24,24 +23,32 @@
 }
 /* Section spacing */
 .contact-page .contact-section {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid #eee;
-}
-
-/* Headings inside section */
-.contact-page .contact-section h2 {
-  margin-bottom: 8px;
 }
 
 .contact-page .contact-section:last-child {
   border-bottom: none;
 }
+
+.contact-page .contact-section ul {
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+.contact-page .contact-section li {
+  margin-bottom: 6px;
+}
+
+/* Headings inside page */
 .contact-page h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 8px;
 }
+
 .contact-page p {
   font-size: 0.95rem;
   color: #666;
@@ -63,21 +70,12 @@
   color: #111;
   text-decoration: none;
   border-bottom: 1px solid #d6b778;
+  margin-bottom: 0px;
+  padding-bottom: 0;
 }
 
 .contact-page a:hover {
   color: #d6b778;
-}
-
-.contact-page ul {
-  padding-left: 18px;
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-
-.contact-page li {
-  margin-bottom: 8px;
-  color: #666;
 }
 
 .contact-page .note {
@@ -87,10 +85,17 @@
 
 .contact-page .brand {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 24px;
+  padding-top: 16px;
   font-size: 0.9rem;
   color: #888;
 }
+/* Remove extra gap before footer caused by brand block */
+.contact-page .brand {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 
 /* ✅ Scoped mobile rules */
 @media (max-width: 480px) {
@@ -102,25 +107,23 @@
     padding: 8px 8px;
   }
 }
-/* 🔧 FIX: Normalize spacing between contact sections */
-.contact-page .contact-section {
-  margin-bottom: 20px;     /* controls gap between sections */
-  padding-bottom: 12px;    /* space before divider */
-}
-
-/* Reduce heading spacing */
-.contact-page .contact-section h2 {
-  margin-bottom: 6px;
-}
-
-/* Kill browser default list margins */
-.contact-page .contact-section ul {
-  margin-top: 6px;
+/* Make Privacy Note spacing match other sections */
+.contact-page .contact-section p {
   margin-bottom: 0;
-  padding-left: 18px;
 }
 
-/* Slightly tighter list items */
-.contact-page .contact-section li {
+.contact-page .contact-section h2 {
+  margin-top: 0;        /* 👈 THIS is the key */
   margin-bottom: 6px;
+}
+/* 🔒 Override global section padding for Contact page */
+.contact-page section {
+  padding: 4px;
+}
+/* 🔒 FINAL FIX: Kill footer top spacing ONLY on Contact page */
+.contact-page + footer,
+.contact-page ~ footer,
+body .contact-page ~ #premium-footer {
+  margin-top: 0 !important;
+  padding-top: 48px !important;
 }
