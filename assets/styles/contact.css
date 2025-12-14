@@ -20,12 +20,12 @@
 
 .contact-page .subtitle {
   color: #666;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .contact-page .contact-section {
-  margin-bottom: 40px;
-  padding-bottom: 32px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
   border-bottom: 1px solid #eee;
 }
 
@@ -36,15 +36,13 @@
 .contact-page h2 {
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
-
 .contact-page p {
   font-size: 0.95rem;
   color: #666;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
-
 .contact-page .contact-box {
   background: #fafafa;
   border-radius: 12px;
@@ -69,6 +67,8 @@
 
 .contact-page ul {
   padding-left: 18px;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
 .contact-page li {
@@ -93,7 +93,8 @@
   .contact-page h1 {
     font-size: 1.7rem;
   }
+
   .contact-page .container {
-    padding: 36px 16px;
+    padding: 8px 8px;
   }
 }
