@@ -65,10 +65,12 @@ p {
 .flex-between { display: flex; justify-content: space-between; align-items: center; }
 
 .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;   /* 👈 HORIZONTAL space between cards */
+  row-gap: 40px;      /* 👈 VERTICAL space (nice to have) */
 }
+
 /* for mobile ***/
 @media (max-width: 768px) {
     .grid-2 {
