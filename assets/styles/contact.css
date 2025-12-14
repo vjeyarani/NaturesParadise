@@ -1,0 +1,135 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #d6b778;
+  --border: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-page {
+  font-family: 'Inter', sans-serif;
+ /**  background: var(--bg); ****/
+  background: #ffffff;
+  color: #111111;
+  color: var(--text);
+  line-height: 1.6;
+  /* behaves like body */
+  min-height: 100vh;
+}
+
+
+.contact-page .container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contact-page .subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 36px;
+}
+
+.contact-page section {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-page section:last-child {
+  border-bottom: none;
+}
+
+.contact-page h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contact-page p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.contact-page .contact-box {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 12px;
+}
+
+.contact-page .contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.contact-page .contact-item span {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.contact-page a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+.contact-page a:hover {
+  color: var(--accent);
+}
+
+.contact-page ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.contact-page li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.contact-page .note {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+.contact-page .brand {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.contact-page .brand strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Mobile polish */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  .container {
+    padding: 36px 16px;
+  }
+}
+
