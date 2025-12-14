@@ -34,18 +34,6 @@
   margin-bottom: 8px;
 }
 
-/* Lists inside section */
-.contact-page .contact-section ul {
-  margin-top: 6px;
-  margin-bottom: 0;
-  padding-left: 18px;
-}
-
-/* List items */
-.contact-page .contact-section li {
-  margin-bottom: 6px;
-}
-
 .contact-page .contact-section:last-child {
   border-bottom: none;
 }
@@ -113,4 +101,26 @@
   .contact-page .container {
     padding: 8px 8px;
   }
+}
+/* 🔧 FIX: Normalize spacing between contact sections */
+.contact-page .contact-section {
+  margin-bottom: 20px;     /* controls gap between sections */
+  padding-bottom: 12px;    /* space before divider */
+}
+
+/* Reduce heading spacing */
+.contact-page .contact-section h2 {
+  margin-bottom: 6px;
+}
+
+/* Kill browser default list margins */
+.contact-page .contact-section ul {
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+/* Slightly tighter list items */
+.contact-page .contact-section li {
+  margin-bottom: 6px;
 }
