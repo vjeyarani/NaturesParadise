@@ -22,17 +22,33 @@
   color: #666;
   margin-bottom: 24px;
 }
-
+/* Section spacing */
 .contact-page .contact-section {
-  margin-bottom: 24px;
-  padding-bottom: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #eee;
+}
+
+/* Headings inside section */
+.contact-page .contact-section h2 {
+  margin-bottom: 8px;
+}
+
+/* Lists inside section */
+.contact-page .contact-section ul {
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+/* List items */
+.contact-page .contact-section li {
+  margin-bottom: 6px;
 }
 
 .contact-page .contact-section:last-child {
   border-bottom: none;
 }
-
 .contact-page h2 {
   font-size: 1.2rem;
   font-weight: 600;
