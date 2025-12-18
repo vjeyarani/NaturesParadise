@@ -1,95 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Get Your Travel Itinerary | XPLORE WORLD</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Get your custom travel itinerary crafted with care. Honest planning, no pressure, no hidden agenda." />
-
-  <!-- Use your existing CSS -->
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-
-<body>
-
-  <!-- HEADER -->
 <header id="site-header">
-    <div class="container flex-between">
-       <div class="logo">
-            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
-        </div>
-
-        <nav>
-            <ul class="nav-menu flex">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a class="active" href="../destinations.html">Destinations</a></li>
-                <li><a href="#../guides.html">Guides</a></li>
-                <li><a href="#../stays.html">Stays</a></li>
-                <li><a href="../december/december-hub.html">December Hub</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+  <div class="nav-container">
+    <div class="logo">
+      <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
     </div>
+
+    <nav class="main-nav">
+      <a href="../../index.html">Home</a>
+      <a href="../destinations.html">Destinations</a>
+      <a href="#../guides.html">Guides</a>
+      <a href="../stays.html">Stays</a>
+      <a href="../december/december-hub.html">December Hub</a>
+      <a class="active" href="../plans/travel-plan.html">Travel Plans</a>
+      <a href="../about.html">About Us</a>
+      <a href="../contact.html">Contact Us</a>
+    </nav>
+  </div>
 </header>
+ <!-- Main Content -->
 
-  <!-- Main Content -->
-  <main class="container" style="padding: 60px 20px; max-width: 900px;">
+<!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Get Your Personalised Itinerary</h1>
+    <p>Tell us how you like to travel. We’ll plan it your way.</p>
+  </section>
 
-    <!-- Hero -->
-    <section style="margin-bottom: 50px;">
-      <h1>Get Your Travel Itinerary</h1>
-      <p style="font-size: 1.1rem; margin-top: 15px;">
-        Thoughtfully curated travel plans, crafted with care.<br>
-        No pressure. No hidden agenda. Just honest guidance for your journey.
-      </p>
-      <p style="margin-top: 15px;">
-        Whether it’s a short escape or a detailed trip, we help you plan with clarity and confidence.
-      </p>
-    </section>
+  <!-- TRAVEL DNA FORM -->
+  <section class="travel-form-section">
+    <form class="travel-form">
 
-    <!-- What You Get -->
-    <section style="margin-bottom: 50px;">
-      <h2>What You Get</h2>
-      <ul style="margin-top: 15px; line-height: 1.8;">
-        <li>Custom <strong>3 / 5 / 7-day itinerary</strong> (PDF)</li>
-        <li>Day-by-day travel flow (morning / afternoon / evening)</li>
-        <li>Stay suggestions based on comfort and budget</li>
-        <li>Activity & experience recommendations</li>
-        <li>Budget guidance and planning tips</li>
-        <li>Weather insights and packing notes</li>
-      </ul>
-      <p style="margin-top: 15px;">
-        Each plan is created manually — no copy-paste templates.
-      </p>
-    </section>
+      <label>
+        Destination(s)
+        <input type="text" placeholder="Eg: Bali, Switzerland" required>
+      </label>
 
-    <!-- How It Works -->
-    <section style="margin-bottom: 50px;">
-      <h2>How It Works</h2>
-      <ol style="margin-top: 15px; line-height: 1.8;">
-        <li>You share your travel details and preferences</li>
-        <li>We understand your expectations and style</li>
-        <li>We thoughtfully curate your itinerary</li>
-        <li>You receive a clean, easy-to-follow PDF</li>
-        <li>You book freely — no obligation, no pressure</li>
-      </ol>
-    </section>
+      <label>
+        Tentative travel dates
+        <input type="text" placeholder="Eg: 10–18 March 2026">
+      </label>
 
-    <!-- CTA -->
-    <section style="text-align: center; margin-top: 60px;">
-      <h2>Ready to plan your trip with clarity?</h2>
-      <p style="margin: 20px 0;">
-        We’ll guide you through the next steps calmly.
-      </p>
-      <a href="/contact.html" class="btn-primary">
-        Request Your Itinerary
-      </a>
-    </section>
+      <label>
+        Number of days
+        <input type="number" placeholder="Eg: 7">
+      </label>
 
-  </main>
+      <label>
+        Who is travelling?
+        <select>
+          <option>Solo</option>
+          <option>Couple</option>
+          <option>Family</option>
+          <option>Family with kids</option>
+          <option>Friends</option>
+        </select>
+      </label>
 
+      <label>
+        Any food allergies or dietary restrictions? (optional)
+        <textarea placeholder="Eg: Nut allergy, vegetarian"></textarea>
+      </label>
+
+      <label>
+        What kind of experience are you looking for?
+        <select>
+          <option>Relaxed & slow</option>
+          <option>Exploring & sightseeing</option>
+          <option>Luxury & comfort</option>
+          <option>Nature & calm</option>
+          <option>Mix of everything</option>
+        </select>
+      </label>
+
+      <label>
+        Any must-do or must-avoid preferences?
+        <textarea placeholder="Eg: Avoid crowds, prefer scenic routes"></textarea>
+      </label>
+
+      <label>
+        A past travel experience you enjoyed (optional)
+        <textarea></textarea>
+      </label>
+
+      <label>
+        A past travel experience you didn’t enjoy (optional)
+        <textarea></textarea>
+      </label>
+
+      <button type="submit">Request My Itinerary</button>
+
+    </form>
+  </section>
+  
 <!-- FOOTER -->
 <footer id="premium-footer">
 
@@ -130,7 +130,7 @@
                 <li><a href="https://www.xploreworld.world/"><span>🌐</span> Website</a></li>
                 <li><a href="#"><span>📸</span> Instagram</a></li>
                 <li><a href="#"><span>📌</span> Pinterest</a></li>
-                <li><a href="link:xploreworld,global@gmail.com"><span>✉️</span> Email</a></li>
+                <li><a href="link:xploreworld.global@gmail.com"><span>✉️</span> Email</a></li>
             </ul>
         </div>
 

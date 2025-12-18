@@ -94,31 +94,30 @@ p {
    1. NAVIGATION
 ---------------------------------- */
 
-
-#site-header {
-    background: #ffffff;
-   /* border-bottom: 1px solid #eee;*/
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-    height: auto;                     /* allow flexible height */
-    /* padding: 20px 0 18px;             /* TOP and BOTTOM space */
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .nav-menu li a {
     padding: 8px 8%; /* improve click area & increase height */
     margin: 0 3px;   /* you can adjust spacing */
     font-size: 18px;
 }
 
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;            /* ⭐ fixes right-shift issue */
+  width: 100%;
+  z-index: 1000;
 
-#site-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+body {
+  padding-top: 120px;   /* matches header height */
+}
+
 
 /* Logo */
 .logo img {
@@ -238,8 +237,8 @@ p {
 }
 
 .destination-header h1 {
-    font-size: 36px;
-    color: #0f3e47;
+    font-size: 48px;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -349,6 +348,11 @@ p {
    7. DECEMBER HUB (KEPT AS IS)
 ---------------------------------- */
 #december-hero {
+  background-image: url("../images/reset_overview_4_panel.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000;     /* fallback for sides */
+  min-height: 80vh;
     position: relative;
     height: 70vh;
     min-height: 480px;
@@ -358,6 +362,21 @@ p {
     color: var(--color-white);
     text-align: center;
     overflow: hidden;
+     margin-top: 72px; /* match navbar height */
+       width: 100%;
+       height:100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.hero {
+  background-image: url("../images/reset_overview_4_panel.webp");
+  background-size: contain;   /* IMPORTANT */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #000;     /* fallback for sides */
+  min-height: 80vh;
 }
 
 .december-hero-bg {
@@ -367,7 +386,9 @@ p {
     background-position: center;
     filter: brightness(0.68);
     z-index: 1;
+    margin-top: 72px; /* match navbar height */
 }
+
 
 .december-hero-content {
     position: relative;
@@ -418,7 +439,7 @@ p {
     background-color: rgb(2, 2, 49);  /* Night Navy */
     color: var(--color-white);
     padding: 60px 0 0;
-    margin-top: 80px;
+    margin-top: 40px;
 }
 
 .footer-container {
@@ -525,7 +546,7 @@ p {
     border: none;
     border-radius: 14px;
     font-size: 16px;
-    font-weight: 600;
+     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
     transition: 0.25s ease;
@@ -1697,4 +1718,2009 @@ D) Soft sky blue (#bfeaff) */
     .dest-card img {
         height: 200px;
     }
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+
+/* Travel Plan Form – layout fix */
+.travel-form label {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.travel-form input,
+.travel-form select,
+.travel-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.travel-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.travel-form button {
+  margin-top: 30px;
+  padding: 14px 22px;
+  font-size: 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+.page-header {
+  padding: 40px 20px 30px; /* instead of large top padding */
+}
+
+.travel-form-section {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ============================= */
+/* TRAVEL PLAN PAGE FIXES */
+/* ============================= */
+
+.travel-plan-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;   /* controlled space below header */
+  padding-bottom: 40px; /* controlled space above footer */
+}
+
+/* Page header spacing */
+.page-header {
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-family: inherit;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #555;
+  max-width: 600px;
+}
+
+/* Form spacing */
+.travel-form-section {
+  margin-top: 24px;
+}
+
+/* Ensure form font consistency */
+.travel-form,
+.travel-form input,
+.travel-form select,
+.travel-form textarea,
+.travel-form button {
+  font-family: inherit;
+}
+#premium-footer {
+  padding-top: 40px;
+}
+/* --------------------------------
+
+   0. RESET + GLOBAL BASE
+---------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-primary);
+    background-color: var(--color-snow-white);
+    color: var(--color-night-navy);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    padding: var(--space-xl) 0;
+}
+
+h1 {
+    font-size: var(--font-size-hero);
+    font-weight: 600;
+    color: var(--color-night-navy);
+    margin-bottom: var(--space-md);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-md);
+}
+
+.text-center { text-align: center; }
+.flex { display: flex; align-items: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;   /* 👈 HORIZONTAL space between cards */
+  row-gap: 40px;      /* 👈 VERTICAL space (nice to have) */
+}
+
+/* for mobile ***/
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+/* --------------------------------
+   1. NAVIGATION
+---------------------------------- */
+
+
+#site-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+
+    height: auto;                 /* flexible height */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* sticky navbar */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+.nav-menu li a {
+    padding: 8px 8%; /* improve click area & increase height */
+    margin: 0 3px;   /* you can adjust spacing */
+    font-size: 18px;
+}
+
+
+#site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
+}
+body {
+  padding-top: 90px;
+}
+
+
+/* Logo */
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Nav Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 26px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-night-navy);
+    transition: 0.2s;
+}
+
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--color-ocean-teal);
+}
+
+/* --------------------------------
+   2. HOME PAGE HERO (UNIQUE)
+---------------------------------- */
+/* ============================
+   PERFECT CENTER-CENTER HERO
+=============================== */
+#hero-section {
+    background-image: url('assets/images/hero.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 72px);  /* exact full-height minus navbar */
+    min-height: 520px;
+
+    display: flex;
+    justify-content: center;     /* vertical center */
+    align-items: center;         /* horizontal center */
+    text-align: center;
+
+    position: relative;
+    color: white;
+    padding: 0;
+}
+
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+}
+.hero-content h1 {
+    white-space: nowrap;      /* ❗ force one line */
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255,215,178,0.28),
+        rgba(0,0,0,0.18)
+    );
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;       /* give enough width for ONE LINE H1 */
+    padding: 0 20px;
+}
+
+#hero-section h1 {
+    color:#ffffff;                          /*#0e6b48; */
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.35);
+}
+
+#hero-section p {
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}
+
+/* --------------------------------
+   3. UNIVERSAL DESTINATION HERO (OPTION C)
+---------------------------------- */
+.destination-hero {
+    width: 100%;
+    height: 42vh;
+    max-height: 420px;
+    overflow: hidden;
+    position: relative;
+}
+
+.destination-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Title section below hero */
+.destination-header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.destination-header h1 {
+    font-size: 36px;
+    color: #0f3e47;
+    margin-bottom: 10px;
+}
+
+.destination-header p {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: #4b4b4b;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .destination-hero { height: 30vh; max-height: 300px; }
+    .destination-header h1 { font-size: 28px; }
+}
+
+/* --------------------------------
+   4. CATEGORY HIGHLIGHTS
+---------------------------------- */
+.category-card {
+    background-color: #fff;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* --------------------------------
+   5. DESTINATION LISTING CARDS
+---------------------------------- */
+.destination-card {
+    display: block;
+    background: #ffffff;
+    padding: 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    /* remove dark tint */
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+.destination-card h3 {
+    margin: 16px 16px 6px;
+    font-size: 20px;
+    color: #16777b;
+}
+
+.destination-card p {
+    margin: 0 16px 20px;
+    color: #4b4b4b;
+    font-size: 15px;
+}
+
+/* REMOVE PLACEHOLDER */
+.placeholder-img { display: none !important; }
+
+/* --------------------------------
+   6. TRAVEL STYLE CARDS (HOME)
+---------------------------------- */
+.travel-styles { padding: 60px 40px; text-align: center; }
+.style-cards { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+
+.card {
+    background: #fff;
+    width: 260px;
+    padding: 28px 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #1b5e68;
+}
+
+/* --------------------------------
+   7. DECEMBER HUB (KEPT AS IS)
+---------------------------------- */
+
+/* mood grid */
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* --------------------------------
+   8. FOOTER
+---------------------------------- */
+#site-footer {
+    background-color: var(--color-night-navy);
+    color: var(--color-white);
+    padding: var(--space-xl) 0;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .style-cards { gap: 20px; }
+    .card { width: 48%; }
+}
+
+@media (max-width: 480px) {
+    .grid-3 { grid-template-columns: 1fr; }
+    .card { width: 100%; }
+}
+
+/* ====================================================
+   PREMIUM FOOTER (Luxury Travel Style)
+==================================================== */
+
+#premium-footer {
+    background-color: rgb(2, 2, 49);  /* Night Navy */
+    color: var(--color-white);
+    padding: 60px 0 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #18a8ad; /* soft teal */
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #e6f7f7;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.85;
+    transition: 0.2s;
+}
+
+.footer-col ul li a:hover {
+    opacity: 1;
+    color: #0abb95;
+}
+
+/* Logo column */
+.footer-logo {
+    width: 120px;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+/* Social icons */
+.social li span {
+    margin-right: 6px;
+}
+
+/* Copyright bar */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 40px;
+    padding: 18px 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.email-form input {
+    padding: 14px 18px;
+    width: 300px;
+    border-radius: 14px;               /* same rounded style as button */
+    border: 1px solid #dce7e7;         /* soft premium grey */
+    background-color: #ffffff;         
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);  /* subtle premium shadow */
+}
+
+.email-form input:focus {
+    border-color: #0abb95;              /* teal focus border */
+    box-shadow: 0 0 0 3px rgba(10, 187, 149, 0.2);  /* soft teal glow */
+}
+.cta-btn {
+    background-color: #0787ad;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    transition: 0.25s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0787ad;
+    transform: translateY(-2px);
+}
+/* ======================================
+   HERO BUTTONS - PREMIUM ROUNDED STYLE
+======================================= */
+
+.hero-buttons {
+    margin-top: 28px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.hero-btn {
+    padding: 14px 30px;
+    border-radius: 16px;      /* perfect rounded corners */
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.25s ease;
+}
+
+/* PRIMARY BUTTON - TEAL */
+.btn-hero-primary {
+    background-color: #0f6385;
+    color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+.btn-hero-primary:hover {
+    background-color: #0f6385;
+    transform: translateY(-2px);
+}
+
+/* SECONDARY BUTTON - WHITE BLEND */
+.btn-hero-secondary {
+    background-color: rgba(255,255,255,0.24);
+    color: white;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    backdrop-filter: blur(2px);
+}
+
+.btn-hero-secondary:hover {
+    background-color: rgba(255,255,255,0.30);
+    transform: translateY(-2px);
+}
+
+.style-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 14px;
+    display: block;
+}
+/* DESTINATION CARD GRID */
+.destination-list,
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+
+/* EACH CARD */
+.dest-card,
+.destination-card {
+    background: #ffffff;
+    padding: 16px;  /* 👈 space INSIDE card */
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    overflow: hidden;
+    display: block;
+}
+
+/* HOVER EFFECT */
+.dest-card:hover,
+.destination-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.16);
+}
+
+/* IMAGE SIZE */
+
+.dest-card img,
+.destination-card img {
+    width: 100%;
+    height: 300px;          /* ⭐ LUXURY HEIGHT */
+    object-fit: cover;
+    object-position: top center;  /* show natural top edge */
+    border-radius: 16px;
+    display: block;
+}
+
+/* TITLE */
+.dest-card h3,
+.destination-card h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #11666d; /* premium teal */
+}
+
+/* SUBTEXT */
+.dest-card p,
+.destination-card p {
+    margin: 0 16px 20px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+#tropical-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* --- BALANCED SECTION SPACING --- */
+section {
+    padding: 80px 0;
+}
+section:first-of-type {
+    padding-top: 0;
+}
+
+/* --- EXPERIENCE CARDS WITH IMAGE THUMBNAILS --- */
+.experience-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+/* --- CLICKABLE STAY CARDS --- */
+.stay-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.stay-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+
+
+/*css for bali page  */
+
+/* --- BALANCED SECTION SPACING --- */
+section {
+    padding: 80px 0;
+}
+section:first-of-type {
+    padding-top: 0;
+}
+
+/* --- EXPERIENCE CARDS WITH IMAGE THUMBNAILS --- */
+.experience-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+/* --- CLICKABLE STAY CARDS --- */
+.stay-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.stay-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+
+/* ================================
+   DESTINATION HERO (Bali, etc.)
+   Independent from Home Hero
+================================ */
+
+.destination-hero {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 60vh;              /* ⭐ not as tall as homepage */
+    min-height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    color: white;
+    padding: 0;
+}
+
+.destination-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.28);  /* subtle overlay */
+    z-index: 1;
+}
+
+.destination-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 940px;
+    padding: 0 20px;
+}
+
+.destination-hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    color:#ffffff;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+}
+
+.destination-hero p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .destination-hero {
+        height: 50vh;
+        min-height: 360px;
+    }
+    .destination-hero h1 {
+        font-size: 32px;
+    }
+}
+
+.bali-page .destination-hero h1 {
+    color: #ffffff; /* or whatever color you choose */
+}
+
+/* A) Teal (#0abb95)
+B) White (#ffffff)
+C) Gold luxury (#f3d9a6)
+D) Soft sky blue (#bfeaff) */
+
+/* Tighter spacing ONLY for Bali page */
+.bali-page section {
+    padding: 55px 0;    /* Reduced from 80px → perfect spacing */
+}
+
+
+/* Reduce extra space for sections with simple text */
+.bali-page #why-visit,
+.bali-page #best-time {
+    padding: 45px 0;
+}
+
+/* Hero stays independent */
+.bali-page .destination-hero {
+    padding: 0;
+}
+/* ==========================================
+   BALANCED, TIGHTER SPACING — ONLY FOR BALI
+   (52px golden ratio spacing)
+========================================== */
+
+.bali-page section {
+    padding: 52px 0;   /* ⭐ final tight-but-airy spacing */
+}
+
+/* Text-only sections (slightly tighter) */
+.bali-page #why-visit,
+.bali-page #best-time {
+    padding: 42px 0;   /* cleaner, less floating space */
+}
+
+/* Experience grid + Stay grid sections */
+.bali-page #top-experiences,
+.bali-page #where-to-stay {
+    padding: 52px 0;
+}
+
+/* CTA section (least spacing) */
+.bali-page section.text-center {
+    padding: 38px 0;
+}
+
+/* Hero remains as-is */
+.bali-page .destination-hero {
+    padding: 0;
+}
+/* EXPERIENCE CARDS WITH IMAGES — ONLY FOR BALI PAGE */
+.bali-page .experience-img-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    padding-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.bali-page .experience-img-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px 18px 0 0;
+}
+
+.bali-page .experience-img-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+.bali-page .experience-img-card h3 {
+    margin: 14px 16px 8px;
+    color: #11888b; 
+    font-size: 20px;
+}
+
+.bali-page .experience-img-card p {
+    margin: 0 16px 18px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Ultra-tight, premium spacing for Bali page */
+.bali-page section {
+    padding: 40px 0;   /* was 80–100px — now clean & modern */
+}
+
+/* For text-only sections like Best Time + Why Visit */
+.bali-page .tight-section {
+    padding: 26px 0;  /* super-clean Apple-style spacing */
+}
+/* CLICKABLE stay card */
+.bali-page .stay-card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 18px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: 0.3s ease;
+}
+
+.bali-page .stay-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Rounded image container */
+.bali-page .stay-card .card-img-wrap {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 18px;
+}
+
+/* Image */
+.bali-page .stay-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+}
+/* --- EXPERIENCE CARDS STYLING TO MATCH STAYS --- */
+
+.experience-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    padding: 16px;               /* space around the image */
+    transition: 0.25s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px;          /* rounding the image itself */
+    display: block;
+}
+
+.experience-card .content {
+    padding-top: 16px;            /* space between image + text */
+}
+
+.experience-card h3 {
+    margin-bottom: 10px;
+    color: #155E63;               /* teal premium color */
+}
+
+.experience-card p {
+    margin: 0;
+    color: #555;
+}
+
+/* -------------------------------
+   Maldives Page (page-specific)
+--------------------------------- */
+
+.maldives-hero-text h1 {
+    color: #ffffff;
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+.maldives-hero-text p {
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+}
+/* Maldives Hero - clean full width */
+.maldives-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+    border-radius: 0 !important;   /* no rounded corners */
+}
+
+.maldives-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.68);
+}
+.destination-hero {
+    position: relative;
+    height: 65vh;
+    min-height: 420px;
+    border-radius: 0;
+    overflow: hidden;
+}
+.destination-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.maldives-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    max-width: 900px;
+}
+
+.maldives-hero-text h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 14px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+}
+
+.maldives-hero-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+
+/* Section spacing fix */
+.destination-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 14px 20px;
+}
+
+/* Maldives badges */
+.badge {
+    background: #e8f4f4;
+    color: #2e7d8e;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+/* GLOBAL HERO STANDARD */
+/* ====================================================
+   GLOBAL HERO STANDARD — responsive & accessible
+   Replaces the fixed 560px rule with clamp() + overlay
+==================================================== */
+
+.destination-hero,
+#hero-section,
+.hero {
+    position: relative;
+    width: 100%;
+    height: clamp(320px, 60vh, 560px); /* responsive: min 320px, ideal 60vh, max 560px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ensure hero image covers and stays crisp */
+.destination-hero img,
+#hero-section img,
+.hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* subtle standardized overlay layer for readability */
+.destination-hero::before,
+#hero-section::before,
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.14));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* hero text container sits above the overlay */
+.hero-text,
+.destination-hero .hero-content,
+#hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 960px;
+    text-align: center;
+    color: #fff; /* safe default for overlayed text */
+}
+
+/* small-screen adjustments */
+@media (max-width: 900px) {
+    .destination-hero,
+    #hero-section,
+    .hero {
+        height: clamp(280px, 45vh, 420px);
+    }
+    .hero-text { padding: 18px; }
+    .hero-content h1 { font-size: clamp(22px, 5.2vw, 36px); }
+}
+
+/* very small screens */
+@media (max-width: 520px) {
+    .destination-hero,
+    #hero-section,
+    .hero {
+        height: clamp(220px, 42vh, 360px);
+    }
+    .hero-text { padding: 14px; }
+    .hero-content h1 { font-size: 20px; line-height: 1.15; white-space: normal; }
+}
+/* MALDIVES PAGE — CARD IMAGE FIX */
+.dd img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+/* Card container */
+.maldives-card {
+    background: #fff;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+/* ---------------------------
+   MALDIVES HERO FIX
+---------------------------- */
+
+.maldives-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+}
+
+.maldives-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 !important;
+    filter: brightness(0.75);
+}
+
+.maldives-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 860px;
+    padding: 0 20px;
+}
+
+.maldives-hero-text h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 12px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+.maldives-hero-text p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.35);
+}
+
+/* ---------------------------------------------------
+   PHUKET PAGE — SAFE PAGE-SPECIFIC STYLES
+   (Nothing here affects Maldives, Bali, Home, etc.)
+---------------------------------------------------- */
+
+/* Hero */
+.phuket-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 62vh;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.phuket-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(6,14,15,0.28); /* contrast shadow */
+}
+
+.phuket-hero-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 960px;
+    padding: 16px 28px;
+}
+
+.phuket-hero-text h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    margin-bottom: 8px;
+    color: #e6f0ef;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    font-weight: 700;
+}
+
+.phuket-hero-text p {
+    font-size: 16px;
+    color: rgba(240,255,255,0.92);
+    text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+
+
+/* Content wrapper */
+.phuket-content {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 20px;
+}
+
+.phuket-section {
+    margin-bottom: 32px;
+}
+
+
+/* Chips */
+.phuket-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.phuket-chip {
+    background: #eefafa;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #186b70;
+}
+
+
+/* Itinerary cards */
+.phuket-itinerary-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.phuket-itinerary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.phuket-itinerary h3 {
+    color: #165a58;
+    margin-bottom: 8px;
+}
+
+
+/* Cards (experiences & stays) */
+.phuket-card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.phuket-card {
+    background: #fff;
+    padding: 14px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+.phuket-card-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 14px 14px 0 14px;
+}
+
+.phuket-card h3 {
+    font-size: 20px;
+    margin: 14px 20px 6px;
+    color: #145c5a;
+}
+
+.phuket-card p {
+    margin: 0 20px 20px;
+    color: #4b4b4b;
+}
+
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .phuket-card-row { grid-template-columns: repeat(2,1fr); }
+    .phuket-itinerary-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .phuket-card-row { grid-template-columns: 1fr; }
+    .phuket-card-img { height: 220px; }
+}
+
+.phuket-page section {
+    padding: 55px 0;    /* Reduced from 80px → perfect spacing */
+}
+
+/*******    Trust Page Styles   ******/
+/* ================================
+   XPLORE WORLD – TRUST PAGE
+   Premium Gold Icon Badges
+================================ */
+
+
+
+/* FOOTER BRAND COLUMN */
+
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Icon + Text row */
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;                 /* spacing between icon + XPLORE WORLD */
+}
+
+/* Icon size */
+.footer-logo-icon {
+    height: 40px;              /* ⭐ perfect icon height */
+    width: auto;
+    display: block;
+}
+
+/* Brand text */
+.footer-logo-text {
+    color: #ffffff;
+    font-size: 20px;           /* matches premium brand scale */
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+/* Tagline */
+.footer-tagline {
+    color: #ffffff;
+    opacity: 0.85;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Make footer responsive */
+@media (max-width: 520px) {
+    .footer-brand-col {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* =======================================================
+   UNIVERSAL GRID SYSTEM (Responsive 2 / 3 / 4 Columns)
+   Global — Used across Home, Destinations, Hub
+   Safe for ALL destinations — Non-page-specific
+======================================================= */
+
+/* ---- GRID-2 ---- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- GRID-3 ---- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- GRID-4 (New — Responsive) ---- */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+/* ---- RESPONSIVE BREAKPOINTS ---- */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobiles */
+@media (max-width: 520px) {
+    .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr !important; }
+}
+
+/* =======================================================
+   GLOBAL DESTINATION CARD SYSTEM
+======================================================= */
+
+.experience-card,
+.stay-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    padding: 0 0 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.experience-card:hover,
+.stay-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.14);
+}
+
+/* Card image */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px 18px 0 0;
+    display: block;
+}
+
+.experience-card h3,
+.stay-card h3 {
+    margin: 16px 16px 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #11666d; /* premium teal tone */
+}
+
+.experience-card p,
+.stay-card p {
+    margin: 0 16px 16px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =======================================================
+   GLOBAL DESTINATION SECTION SPACING
+======================================================= */
+.destination-section {
+    padding: 60px 0;
+}
+
+.destination-section.tight {
+    padding: 36px 0;
+}
+
+
+
+
+/* ----- UNIVERSAL CARD BASE ----- */
+.card-base {
+    background: #ffffff;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.25s ease;
+}
+
+.card-base:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ----- UNIVERSAL CARD IMAGE ----- */
+.card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
+
+/* ----- UNIVERSAL TIPS LIST ----- */
+.tips-list {
+    list-style: disc;
+    margin-left: 24px;
+    color: var(--color-night-navy);
+}
+
+.tips-list li {
+    margin-bottom: 8px;
+}
+
+/**** About & Trust Page Styles ****/
+/* ======================================================
+   XPLORE WORLD – ITINERARY CTA BUTTON GROUP
+   For 3-Day / 5-Day / 7-Day Plans
+====================================================== */
+
+/* Wrapper */
+.itinerary-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive row */
+.itinerary-btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.itinerary-btn {
+    padding: 14px 26px;
+    border-radius: 16px;
+    font-size: 17px;
+    font-weight: 600;
+    background: #0f6385;              /* your premium teal */
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    transition: 0.25s ease;
+}
+
+.itinerary-btn:hover {
+    background: #0c516d;
+    transform: translateY(-2px);
+}
+
+/* Secondary CTA under it */
+.itinerary-secondary-link {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 16px;
+    color: #0f6385;
+    font-weight: 500;
+}
+
+/* MOBILE */
+@media(max-width: 520px) {
+    .itinerary-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ABOUT PAGE – TIGHT PREMIUM SPACING */
+.about-page section {
+    padding: 24px 0 !important;
+}
+
+.about-page .tight-section {
+    padding: 6px 0 !important;
+}
+
+.about-page h2 {
+    margin-bottom: 10px !important;
+}
+
+.about-page p {
+    margin-bottom: 10px !important;
+}
+/* Remove extra spacing after final CTA on About Page */
+/* Remove extra white space under the final CTA on About Page */
+/* Completely remove extra white space below final CTA on About Page */
+.about-page #final-cta {
+    padding-top: 0 !important;
+    color:#FFFFFF;
+    padding-bottom: 16px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.about-page #final-cta.container {
+    padding-bottom: 0 !important;
+    margin-bottom: 16px !important;
+}
+.about-page footer {
+    padding-top: 18px !important;
+    margin-top: 12px !important;
+}
+/* HERO OVERLAY — Sunrise, positive, light */
+/* About page hero overlay only */
+.about-page #about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255, 236, 210, 0.18),
+        rgba(0, 0, 0, 0.22)
+    );
+    z-index: 1;
+}
+
+.about-page .hero h1 {
+    color:#ffffff;                          /*#0e6b48; */
+    text-shadow: 0px 2px 8px rgba(0,0,0,0.35);
+}
+
+.about-page .hero p {
+    color:#ffffff;  
+    text-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}
+
+/* DESTINATION LIST IMAGE FIX */
+.destination-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.dest-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dest-card img {
+    width: 100%;
+    height: 280px;          /* 👈 fixes oversized images */
+    object-fit: cover;      /* 👈 clean crop */
+    border-radius: 16px;
+    display: block;
+}
+
+.dest-card h3 {
+    margin: 12px 0 4px;
+}
+
+.dest-card p {
+    margin: 0;
+    color: #555;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .dest-card img {
+        height: 200px;
+    }
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+
+/* Travel Plan Form – layout fix */
+/* ============================= */
+/* TRAVEL PLAN PAGE FIXES */
+/* ============================= */
+
+.travel-plan-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 10px;   /* controlled space below header */
+  padding-bottom: 10px; /* controlled space above footer */
+}
+
+/* Page header spacing */
+.page-header {
+  margin-bottom: 12px;
+}
+
+.page-header h1 {
+  font-family: inherit;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #555;
+  max-width: 600px;
+}
+
+/* Form spacing */
+.travel-form-section {
+  margin-top: 24px;
+}
+
+/* Ensure form font consistency */
+.travel-form,
+.travel-form input,
+.travel-form select,
+.travel-form textarea,
+.travel-form button {
+  font-family: inherit;
+}
+
+.travel-form label {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.travel-form input,
+.travel-form select,
+.travel-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.travel-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.travel-form button {
+  margin-top: 30px;
+  padding: 14px 22px;
+  font-size: 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.page-header {
+  padding: 40px 20px 30px; /* instead of large top padding */
+}
+.travel-form-section {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+
+.page-header
+.travel-form-section
+
+
+/* =========================================
+   TRAVEL PLAN PAGE – OVERRIDE GLOBAL SPACING
+========================================= */
+
+.travel-plan-page section {
+  padding: 24px 0 !important;   /* kills the 80px */
+}
+
+.travel-plan-page .page-header {
+  padding-top: 16px !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 16px;
+}
+
+.travel-plan-page .travel-form-section {
+  padding-top: 0 !important;
+  padding-bottom: 24px !important;
+}
+
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;            /* ⭐ fixes right-shift issue */
+  width: 100%;
+  z-index: 1000;
+
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+body {
+  padding-top: 90px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav a {
+  margin-left: 22px;
+  font-weight: 500;
+  font-size: 16px;
+}
+/* ===============================
+   TRAVEL PLAN – HARD RESET
+================================ */
+
+.travel-plan-page section {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Travel Plan Form – layout fix */
+/* ============================= */
+/* TRAVEL PLAN PAGE FIXES */
+/* ============================= */
+.travel-form label {
+  display: block;
+  margin-bottom: 22px;
+  font-weight: 500;
+}
+
+.travel-form input,
+.travel-form select,
+.travel-form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+}
+
+.travel-form textarea {
+  min-height: 90px;
+}
+
+.travel-form button {
+  margin-top: 24px;
+  padding: 14px 24px;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.travel-plan-page footer {
+  margin-top: 40px;
+}
+.travel-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 24px;
+}
+
+.page-header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #555;
 }
