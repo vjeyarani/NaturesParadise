@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Your Personalised Itinerary – XPLORE WORLD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- GLOBAL STYLES -->
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../tokens.css">
+</head>
+
+<body class="travel-plan-page">
+
+<!-- ================= HEADER ================= -->
 <header id="site-header">
   <div class="nav-container">
     <div class="logo">
@@ -8,7 +23,7 @@
       <a href="../../index.html">Home</a>
       <a href="../destinations.html">Destinations</a>
       <a href="#../guides.html">Guides</a>
-      <a href="../stays.html">Stays</a>
+      <a href="../plans/stays.html">Stays</a>
       <a href="../december/december-hub.html">December Hub</a>
       <a class="active" href="../plans/travel-plan.html">Travel Plans</a>
       <a href="../about.html">About Us</a>
@@ -16,130 +31,176 @@
     </nav>
   </div>
 </header>
- <!-- Main Content -->
 
-<!-- PAGE HEADER -->
+<!-- ================= MAIN ================= -->
+<main class="travel-plan-main">
   <section class="page-header">
+  <div class="page-header-inner">
     <h1>Get Your Personalised Itinerary</h1>
     <p>Tell us how you like to travel. We’ll plan it your way.</p>
-  </section>
+  </div>
+</section>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Get Your Personalised Itinerary</h1>
+    <p>Tell us how you like to travel. We’ll plan it your way.</p>
+  </div>
 
   <!-- TRAVEL DNA FORM -->
-  <section class="travel-form-section">
-    <form class="travel-form">
 
-      <label>
-        Destination(s)
-        <input type="text" placeholder="Eg: Bali, Switzerland" required>
-      </label>
+ <form name="submit-to-google-sheet" class="travel-form">
+      <label>Full Name <input name="Name" type="text" placeholder="Name" required></label>
+       <label>Email Address<input name="Email" type="email" placeholder="Email" required></label>
+       <label>Mobile Number<input name="Mobile" type="phone" placeholder="Eg. +916361350870" required></label>
+       <label>
+  Destination(s)
+  <input type="text" name="Destinations" placeholder="Eg. Bali, Goa, Austria,Japan..." required>
+</label>
 
-      <label>
-        Tentative travel dates
-        <input type="text" placeholder="Eg: 10–18 March 2026">
-      </label>
+<label>
+  Tentative travel dates
+  <input type="text" name="Travel_Dates" placeholder="Eg. DD/MM/YYYY" required>
+</label>
+<label> Number of days<input name="Number_of_Days" type="number" placeholder="Eg. 5/7/10 Days" required></label> 
+<label>
+  Who is travelling?
+  <select name="Travellers" required>
+    <option>Solo</option>
+    <option>Couple</option>
+    <option>Family</option>
+    <option>Family with kids</option>
+    <option>Friends</option>
+  </select>
+</label>  
+<label>
+  Any food allergies or dietary restrictions?
+  <textarea name="Allergies" placeholder="Eg.Vegan,Non Vegetarian, Vegetarian" required ></textarea>
+</label>
+<label>
+  Experience type
+  <select name="Experience_Type">
+    <option>Relaxed & slow</option>
+    <option>Exploring & sightseeing</option>
+    <option>Luxury & comfort</option>
+    <option>Nature & calm</option>
+    <option>Mix of everything</option>
+  </select>
+</label>
+<label>
+  Any general preferences?
+  <textarea 
+    name="Preferences" 
+    placeholder="Eg: Slow mornings, boutique hotels, less driving, cultural experiences">
+  </textarea>
+</label>
 
-      <label>
-        Number of days
-        <input type="number" placeholder="Eg: 7">
-      </label>
+<label>
+  A past travel experience you enjoyed
+  <textarea name="Past_Positive_Experience"></textarea>
+</label>
 
-      <label>
-        Who is travelling?
-        <select>
-          <option>Solo</option>
-          <option>Couple</option>
-          <option>Family</option>
-          <option>Family with kids</option>
-          <option>Friends</option>
-        </select>
-      </label>
+<label>
+  A past travel experience you didn’t enjoy
+  <textarea name="Past_Negative_Experience"></textarea>
+</label>
+ 
+<button type="submit" id="submitBtn" style=" background-color: #0f6385;
+    color: white;"class="btn-hero-primary cta-btn" >Book My Itinerary</button>
+</form>
 
-      <label>
-        Any food allergies or dietary restrictions? (optional)
-        <textarea placeholder="Eg: Nut allergy, vegetarian"></textarea>
-      </label>
+<span id="msg"></span>
 
-      <label>
-        What kind of experience are you looking for?
-        <select>
-          <option>Relaxed & slow</option>
-          <option>Exploring & sightseeing</option>
-          <option>Luxury & comfort</option>
-          <option>Nature & calm</option>
-          <option>Mix of everything</option>
-        </select>
-      </label>
+    <script>
+        // PASTE YOUR DEPLOYMENT URL HERE
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyUHtz1FJ3-4eQ30ikOlAh9MKhdNXsHv3Z33bHHiaMYUDy7I9TEkW9GjJTF5gYr3b1d/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+        const submitBtn = document.getElementById("submitBtn");
 
-      <label>
-        Any must-do or must-avoid preferences?
-        <textarea placeholder="Eg: Avoid crowds, prefer scenic routes"></textarea>
-      </label>
+        form.addEventListener('submit', e => {
+            e.preventDefault();
 
-      <label>
-        A past travel experience you enjoyed (optional)
-        <textarea></textarea>
-      </label>
+            // 1. VISUAL FEEDBACK: Change button text and disable it
+            msg.innerHTML = "";
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "Sending...";
 
-      <label>
-        A past travel experience you didn’t enjoy (optional)
-        <textarea></textarea>
-      </label>
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    if (response.ok) {
+                        msg.innerHTML = "Thank you! We’ve received your travel request.";
+                        msg.classList.add("success");
+                        msg.classList.remove("error");
+                        form.reset();
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
+                    
+                    // Reset button after 5 seconds
+                    setTimeout(function(){
+                        msg.innerHTML = "";
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = "Book My Itinerary";
+                    }, 5000);
+                })
+                .catch(error => {
+                    msg.innerHTML = "Error! Please check your internet or try again.";
+                    msg.classList.add("error");
+                    console.error('Error!', error.message);
+                    
+                    // Re-enable button immediately so they can retry
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML= "Book My Itinerary";
+                });
+        });
+    </script>
+</main>
 
-      <button type="submit">Request My Itinerary</button>
-
-    </form>
-  </section>
-  
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer id="premium-footer">
-
-    <div class="footer-container">
-
-        <!-- Column 1 -->
-        <div class="footer-col">
-            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
-            <p class="footer-tagline">A Premium Travel Platform</p>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="footer-col">
-            <h4>Destinations</h4>
-            <ul>
-                <li><a href="../destinations.html">All Destinations</a></li>
-                <li><a href="bali.html">Bali</a></li>
-                <li><a href="maldives.html">Maldives</a></li>
-                <li><a href="switzerland.html">Switzerland</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-col">
-            <h4>Explore</h4>
-            <ul>
-                <li><a href="../guides.html">Guides</a></li>
-                <li><a href="../stays.html">Stays</a></li>
-                <li><a href="../december/december-hub.html">December Hub</a></li>
-                <li><a href="../about.html">About Us</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 4 -->
-        <div class="footer-col">
-            <h4>Connect</h4>
-            <ul class="social">
-                <li><a href="https://www.xploreworld.world/"><span>🌐</span> Website</a></li>
-                <li><a href="#"><span>📸</span> Instagram</a></li>
-                <li><a href="#"><span>📌</span> Pinterest</a></li>
-                <li><a href="link:xploreworld.global@gmail.com"><span>✉️</span> Email</a></li>
-            </ul>
-        </div>
-
+  <div class="footer-container">
+    <div class="footer-col">
+      <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
+      <p class="footer-tagline">A Premium Travel Platform</p>
     </div>
 
-    <div class="footer-bottom">
-        <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <ul>
+        <li><a href="../destinations.html">All Destinations</a></li>
+        <li><a href="../destinations/bali.html">Bali</a></li>
+        <li><a href="../destinations/maldives.html">Maldives</a></li>
+        <li><a href="../destinations/switzerland.html">Switzerland</a></li>
+      </ul>
     </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="../guides.html">Guides</a></li>
+        <li><a href="../stays.html">Stays</a></li>
+        <li><a href="../december/december-hub.html">December Hub</a></li>
+        <li><a href="../about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul class="social">
+        <li><a href="https://www.xploreworld.world/"><span>🌐</span> Website</a></li>
+        <li><a href="#"><span>📸</span> Instagram</a></li>
+        <li><a href="#"><span>📌</span> Pinterest</a></li>
+        <li><a href="mailto:xploreworld.global@gmail.com"><span>✉️</span> Email</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
+  </div>
+
 </footer>
-
 </body>
 </html>
