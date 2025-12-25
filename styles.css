@@ -3968,7 +3968,7 @@ footer {
 /* mobile nav links */
 .mobile-nav a {
   padding: 14px 18px;
-  display: block;
+  display: none;
   color: #111;
   text-decoration: none;
   border-bottom: 1px solid #f2f2f2;

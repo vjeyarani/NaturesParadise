@@ -350,12 +350,13 @@
     </div>
 </footer>
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const mobileNav = document.querySelector('.mobile-nav');
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav");
 
-  hamburger.addEventListener('click', () => {
-    mobileNav.style.display =
-      mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    hamburger.addEventListener("click", function () {
+      mobileNav.classList.toggle("active");
+    });
   });
 </script>
 
