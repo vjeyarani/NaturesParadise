@@ -3993,3 +3993,8 @@ footer {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;   /* 👈 THIS FIXES YOUR ISSUE */
+  }
+}
