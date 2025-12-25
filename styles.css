@@ -3995,3 +3995,18 @@ header {
   position: relative;
   overflow: visible;
 }
+/* ===== FINAL MOBILE NAV FIX ===== */
+@media (max-width: 768px) {
+
+  /* hide desktop horizontal menu COMPLETELY */
+  .nav-links,
+  .nav-menu,
+  .menu {
+    display: none !important;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: block !important;
+  }
+}
