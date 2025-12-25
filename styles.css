@@ -3921,79 +3921,28 @@ footer {
 }
 
 
-/* ===== STEP 2: MOBILE NAV VISIBILITY ===== */
-/* ===== DESKTOP SAFETY LOCK ===== */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-}
-
-@media (min-width: 769px) {
-  .hamburger {
-    display: none !important;
-  }
-
-  .mobile-nav {
-    display: none !important;
-  }
-}
-
-  /* show hamburger button */
-  .hamburger {
-    display: block;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-}
-/* ===== STEP 2.1: FORCE DESKTOP NAV HIDE ON MOBILE ===== */
-@media (max-width: 768px) {
-
-  header nav {
-    display: none !important;
-  }
-
-  .hamburger {
-    display: block;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-}
-/* ===== STEP 4: MOBILE MENU BASE ===== */
 .mobile-nav {
-  display: none;
-  position: fixed;      /* 🔥 important */
-  top: 56px;            /* header height */
-  left: 0;
-  width: 100%;
-  background: #fff;
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
   z-index: 9999;
+  display: none;
   flex-direction: column;
-  border-top: 1px solid #eee;
-  padding: 14px 18px;
-  border-bottom: 1px solid #918f8f;
-  font-size: 16px;
+  padding-top: 72px;
 }
+
 .mobile-nav a {
+  padding: 16px 20px;
   display: block !important;
   color: #111;
-  padding: 14px 18px;
-  font-size: 16px;
+  font-size: 18px;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 }
-
 .mobile-nav.active {
   display: flex;
 }
-
-header {
-  position: relative;
-  overflow: visible;
-}
-/* ===== FINAL MOBILE NAV FIX ===== */
 @media (max-width: 768px) {
 
   /* hide ONLY desktop menu */
@@ -4004,6 +3953,13 @@ header {
   header .menu-items {
     display: none !important;
   }
+  @media (min-width: 769px) {
+  .mobile-nav,
+  .hamburger {
+    display: none !important;
+  }
+}
+
 
   /* allow mobile menu */
   .mobile-nav {
@@ -4019,25 +3975,14 @@ header {
     display: block !important;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+    pointer-events: none;
+  }
 
-  /* hide desktop horizontal menu COMPLETELY */
-  .nav-links,
-  .nav-menu,
-  .menu {
+  .mobile-nav {
     display: none !important;
   }
-
-  /* show hamburger */
-  .hamburger {
-    display: block !important;
-  }
 }
 
-
-
-.mobile-nav {
-  background: #ffffff;
-  min-height: 100vh;   /* 🔥 key fix */
-  padding-top: 16px;
-}
