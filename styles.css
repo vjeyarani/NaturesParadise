@@ -3922,12 +3922,16 @@ footer {
 
 
 /* ===== STEP 2: MOBILE NAV VISIBILITY ===== */
-@media (max-width: 768px) {
-
-  /* hide desktop navigation */
-  .main-nav {
-    display: none;
+/* ===== DESKTOP SAFETY LOCK ===== */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
   }
+
+  .mobile-nav {
+    display: none !important;
+  }
+}
 
   /* show hamburger button */
   .hamburger {
@@ -3955,22 +3959,33 @@ footer {
 }
 /* ===== STEP 4: MOBILE MENU BASE ===== */
 .mobile-nav {
-  display: none;            /* hidden by default */
-  position: absolute;
-  top: 64px;                /* header height approx */
+  display: none;
+  position: fixed;      /* 🔥 important */
+  top: 56px;            /* header height */
   left: 0;
   width: 100%;
-  background: #ffffff;
-  z-index: 999;
+  background: #fff;
+  z-index: 9999;
+  flex-direction: column;
   border-top: 1px solid #eee;
+  padding: 14px 18px;
+  border-bottom: 1px solid #918f8f;
+  font-size: 16px;
 }
 
-/* mobile nav links */
 .mobile-nav a {
   padding: 14px 18px;
-  display: none;
+  display: block;
+  border-bottom: 1px solid #f2f2f2;
   color: #111;
   text-decoration: none;
-  border-bottom: 1px solid #f2f2f2;
-  font-size: 16px;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+header {
+  position: relative;
+  overflow: visible;
 }
