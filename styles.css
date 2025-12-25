@@ -4019,7 +4019,20 @@ header {
     display: block !important;
   }
 }
+@media (max-width: 768px) {
 
+  /* hide desktop horizontal menu COMPLETELY */
+  .nav-links,
+  .nav-menu,
+  .menu {
+    display: none !important;
+  }
+
+  /* show hamburger */
+  .hamburger {
+    display: block !important;
+  }
+}
 
 
 
