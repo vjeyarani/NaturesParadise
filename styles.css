@@ -3946,13 +3946,13 @@ footer {
    MOBILE MENU OVERLAY
 ========================= */
 .mobile-nav {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 64px;
   left: 0;
   width: 100%;
   height: 100vh;
   background: #ffffff;
-  z-index: 9999;
+  z-index: 1000;
 
   display: none;
   flex-direction: column;
