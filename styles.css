@@ -4022,20 +4022,7 @@ header {
 
 
 
-@media (max-width: 768px) {
 
-  /* hide desktop horizontal menu COMPLETELY */
-  .nav-links,
-  .nav-menu,
-  .menu {
-    display: none !important;
-  }
-
-  /* show hamburger */
-  .hamburger {
-    display: block !important;
-  }
-}
 .mobile-nav {
   background: #ffffff;
   min-height: 100vh;   /* 🔥 key fix */
