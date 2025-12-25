@@ -362,21 +362,16 @@
     </div>
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  alert("JS loaded");
-
+document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".mobile-nav");
 
-  if (!hamburger) alert("hamburger NOT found");
-  if (!mobileNav) alert("mobile-nav NOT found");
-
-  hamburger.addEventListener("click", () => {
-    alert("hamburger clicked");
+  hamburger.addEventListener("click", function () {
     mobileNav.classList.toggle("active");
   });
 });
 </script>
+
 
 
 

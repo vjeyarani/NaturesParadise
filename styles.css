@@ -4004,3 +4004,9 @@ footer {
   z-index: 100000;
   pointer-events: auto;
 }
+@media (min-width: 769px) {
+  .hamburger,
+  .mobile-nav {
+    display: none !important;
+  }
+}
