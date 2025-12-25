@@ -3997,3 +3997,8 @@ footer {
   position: relative;
   z-index: 1000;
 }
+.hamburger {
+  position: relative;
+  z-index: 100000;
+  pointer-events: auto;
+}
