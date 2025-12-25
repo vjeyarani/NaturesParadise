@@ -3945,31 +3945,33 @@ footer {
 /* =========================
    MOBILE MENU OVERLAY
 ========================= */
+/* Mobile nav hidden by default */
 .mobile-nav {
-  position: absolute;
-  top: 64px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #ffffff;
-  z-index: 1000;
-
   display: none;
   flex-direction: column;
-  padding-top: 70px;
+  position: absolute;
+  top: 64px;              /* below header */
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 999;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-.mobile-nav a {
-  padding: 16px 20px;
-  font-size: 18px;
-  color: #111;
-  text-decoration: none;
-  border-bottom: 1px solid #eee;
-}
-
+/* Show when active */
 .mobile-nav.active {
   display: flex;
 }
+
+/* Links */
+.mobile-nav a {
+  padding: 14px 20px;
+  text-decoration: none;
+  color: #111;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
 
 /* =========================
    MOBILE RULES
@@ -3990,7 +3992,7 @@ footer {
 @media (min-width: 769px) {
   .mobile-nav,
   .hamburger {
-    display: none !important;
+    display: inline-block !important;
   }
 }
 @media (max-width: 768px) {
