@@ -3920,7 +3920,6 @@ footer {
   margin-bottom: 16px;
 }
 
-
 .mobile-nav {
   position: fixed;
   inset: 0;
@@ -3953,7 +3952,7 @@ footer {
   header .menu-items {
     display: none !important;
   }
-  @media (min-width: 769px) {
+  @media (min-width: 400px) {
   .mobile-nav,
   .hamburger {
     display: none !important;
