@@ -3979,7 +3979,8 @@ footer {
   font-size: 16px;
 }
 .mobile-nav a {
-  display: block;
+  display: block !important;
+  color: #111;
   padding: 14px 18px;
   font-size: 16px;
 }
@@ -3993,6 +3994,34 @@ header {
   overflow: visible;
 }
 /* ===== FINAL MOBILE NAV FIX ===== */
+@media (max-width: 768px) {
+
+  /* hide ONLY desktop menu */
+  header ul:not(.mobile-nav),
+  header .nav,
+  header .nav-links,
+  header .menu,
+  header .menu-items {
+    display: none !important;
+  }
+
+  /* allow mobile menu */
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+}
+
+
+
 @media (max-width: 768px) {
 
   /* hide desktop horizontal menu COMPLETELY */
