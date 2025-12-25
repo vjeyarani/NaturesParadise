@@ -3922,26 +3922,34 @@ footer {
 
 .mobile-nav {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: #ffffff;
-  z-index: 9999;
+  z-index: 99999;
+
   display: none;
   flex-direction: column;
-  padding-top: 10px;
+
+  padding-top: 80px; /* space below header */
+  overflow-y: auto;
+}
+.mobile-nav.active {
+  display: flex;
 }
 
+
 .mobile-nav a {
+  display: block;
   padding: 16px 20px;
-  display: block !important;
-  color: #111;
   font-size: 18px;
   color: #111;
   text-decoration: none;
   border-bottom: 1px solid #eee;
 }
-.mobile-nav.active {
-  display: flex;
-}
+
+
 @media (max-width: 768px) {
 
   /* hide ONLY desktop menu */
@@ -3952,7 +3960,7 @@ footer {
   header .menu-items {
     display: none !important;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 768px) {
   .mobile-nav,
   .hamburger {
     display: none !important;
@@ -3985,3 +3993,7 @@ footer {
   }
 }
 
+.site-header {
+  position: relative;
+  z-index: 1000;
+}
