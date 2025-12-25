@@ -3921,7 +3921,30 @@ footer {
 }
 
 /* ===== MOBILE MENU – FINAL ===== */
-/* ===== MOBILE MENU – FINAL ===== */
+/* =========================
+   HEADER BASE
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE MENU OVERLAY
+========================= */
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -3929,22 +3952,14 @@ footer {
   width: 100%;
   height: 100vh;
   background: #ffffff;
-  z-index: 99999;
+  z-index: 9999;
 
   display: none;
   flex-direction: column;
-  align-items: flex-start;
-
   padding-top: 70px;
 }
 
-.mobile-nav.active {
-  display: flex;
-}
-
 .mobile-nav a {
-  display: block;
-  width: 100%;
   padding: 16px 20px;
   font-size: 18px;
   color: #111;
@@ -3952,61 +3967,29 @@ footer {
   border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 768px) {
-
-  /* hide ONLY desktop menu */
-  header ul:not(.mobile-nav),
-  header .nav,
-  header .nav-links,
-  header .menu,
-  header .menu-items {
-    display: none !important;
-  }
-  @media (min-width: 768px) {
-  .mobile-nav,
-  .hamburger {
-    display: none !important;
-  }
+.mobile-nav.active {
+  display: flex;
 }
 
-
-  /* allow mobile menu */
-  .mobile-nav {
+/* =========================
+   MOBILE RULES
+========================= */
+@media (max-width: 768px) {
+  .desktop-nav {
     display: none;
   }
 
-  .mobile-nav.active {
-    display: flex;
-    flex-direction: column;
-  }
-
   .hamburger {
-    display: block !important;
+    display: block;
   }
 }
+
+/* =========================
+   DESKTOP SAFETY
+========================= */
 @media (min-width: 769px) {
+  .mobile-nav,
   .hamburger {
-    display: none !important;
-    pointer-events: none;
-  }
-
-  .mobile-nav {
-    display: none !important;
-  }
-}
-
-.site-header {
-  position: relative;
-  z-index: 1000;
-}
-.hamburger {
-  position: relative;
-  z-index: 100000;
-  pointer-events: auto;
-}
-@media (min-width: 769px) {
-  .hamburger,
-  .mobile-nav {
     display: none !important;
   }
 }
