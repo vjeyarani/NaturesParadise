@@ -349,6 +349,15 @@
         <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.style.display =
+      mobileNav.style.display === 'flex' ? 'none' : 'flex';
+  });
+</script>
 
 </body>
 </html>
