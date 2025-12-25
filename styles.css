@@ -3854,3 +3854,68 @@ footer {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
 }
+
+.blogs-hero,
+.blog-hero {
+  max-width: 900px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+}
+
+.blogs-hero h1,
+.blog-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.blog-sub {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.blog-content {
+  max-width: 760px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  line-height: 1.7;
+}
+
+.blog-intro {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.blogs-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.blog-card {
+  display: block;
+  padding: 28px;
+  border: 1px solid #eee;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-card:hover {
+  border-color: #ccc;
+}
+.blog-image-frame {
+  max-width: 760px;           /* SAME as blog-content */
+  margin: 24px auto 32px;     /* tighter vertical spacing */
+  padding: 0 20px;            /* SAME side padding */
+}
+
+.blog-image-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;          /* KEY: controls vertical size */
+  object-fit: cover;          /* crops gently if needed */
+  border-radius: 4px;
+  display: block;
+}
+.blog-hero {
+  margin-bottom: 16px;
+}
