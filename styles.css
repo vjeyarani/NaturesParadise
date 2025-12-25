@@ -3928,7 +3928,7 @@ footer {
   z-index: 9999;
   display: none;
   flex-direction: column;
-  padding-top: 72px;
+  padding-top: 10px;
 }
 
 .mobile-nav a {
