@@ -3980,56 +3980,37 @@ footer {
   border-bottom: 1px solid #eee;
   font-size: 16px;
 }
-
-
 /* =========================
-   MOBILE RULES
-========================= */
+   NAV VISIBILITY — FINAL
+   ========================= */
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .nav-desktop {
+    display: flex;
+  }
+
+  .hamburger,
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+
   .hamburger {
     display: block;
   }
-}
 
-/* =========================
-   DESKTOP SAFETY
-   =======================*/
-@media (max-width: 768px) {
-  .nav-desktop {
-    display: none;   /* 👈 THIS FIXES YOUR ISSUE */
-  }
-}
-/* FORCE HIDE DESKTOP NAV ON MOBILE — GLOBAL */
-@media (max-width: 768px) {
-  .nav-desktop {
-    display: none !important;
+  .mobile-nav {
+    display: none;
   }
 
-  .hamburger {
-    display: block !important;
+  .mobile-nav.active {
+    display: flex;
   }
 }
-/* ==== MOBILE NAV OVERRIDE (FINAL) ==== */
-@media (max-width: 768px) {
-  header .nav-desktop,
- {
-    display: none !important;
-  }
-
-  .hamburger {
-    display: block !important;
-  }
-}
-/* ==== FORCE MOBILE NAV FOR ALL PAGES ==== */
-@media (max-width: 768px) {
-  body.stays-page .nav-desktop,
-  body.stays-page nav {
-    display: none !important;
-  }
-
-  body.stays-page .hamburger {
-    display: block !important;
-  }
-}
-
-
