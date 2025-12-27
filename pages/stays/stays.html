@@ -13,6 +13,7 @@
 
 <!-- HEADER -->
 <header id="site-header">
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button> 
     <div class="container flex-between">
         <div class="logo">
             <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo" />
@@ -175,6 +176,11 @@
     </div>
 
 </footer>
-
+<script>
+function toggleMobileMenu() {
+  document.querySelector('.mobile-nav')
+    .classList.toggle('active');
+}
+</script>
 </body>
 </html>

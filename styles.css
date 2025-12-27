@@ -3986,10 +3986,6 @@ footer {
    MOBILE RULES
 ========================= */
 @media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
   .hamburger {
     display: block;
   }
@@ -3997,13 +3993,7 @@ footer {
 
 /* =========================
    DESKTOP SAFETY
-========================= */
-@media (min-width: 769px) {
-  .mobile-nav,
-  .hamburger {
-    display: inline-block !important;
-  }
-}
+   =======================*/
 @media (max-width: 768px) {
   .nav-desktop {
     display: none;   /* 👈 THIS FIXES YOUR ISSUE */
@@ -4019,15 +4009,25 @@ footer {
     display: block !important;
   }
 }
-//* ==== MOBILE NAV OVERRIDE (FINAL) ==== */
+/* ==== MOBILE NAV OVERRIDE (FINAL) ==== */
 @media (max-width: 768px) {
   header .nav-desktop,
-  header nav,
-  header .nav-menu {
+ {
     display: none !important;
   }
 
   .hamburger {
+    display: block !important;
+  }
+}
+/* ==== FORCE MOBILE NAV FOR ALL PAGES ==== */
+@media (max-width: 768px) {
+  body.stays-page .nav-desktop,
+  body.stays-page nav {
+    display: none !important;
+  }
+
+  body.stays-page .hamburger {
     display: block !important;
   }
 }
