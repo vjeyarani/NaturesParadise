@@ -13,15 +13,16 @@
 
 <!-- HEADER -->
 <header id="site-header">
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button> 
     <div class="container flex-between">
         <div class="logo">
-            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
+            <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo">
         </div>
 
-        <nav>
+        <nav class="nav-desktop">
             <ul class="nav-menu flex">
                 <li><a href="../../index.html">Home</a></li>
-                <li><a class="active" href="../destinations.html">Destinations</a></li>
+                <li><a href="../destinations.html">Destinations</a></li>
                 <li><a href="../../blogs/index.html">Guides</a></li>
                 <li><a href="../stays.html">Stays</a></li>
                 <li><a href="../december/december-hub.html">December Hub</a></li>
@@ -32,7 +33,16 @@
         </nav>
     </div>
 </header>
-
+ <div class="mobile-nav" onclick="this.classList.remove('active')">
+           <a href="../../index.html">Home</a>
+           <a href="../destinations.html">Destinations</a>
+           <a href="../../blogs/index.html">Blogs</a>
+           <a href="../stays/stays.html">Stays</a>
+           <a href="../december/december-hub.html">December Hub</a>
+            <a href="../plans/travel-plan.html">Travel Plans</a>
+           <a href="../about.html">About Us</a>
+            <a href="../contact.html">Contact Us</a>
+</div>
 <!-- HERO -->
 <section class="destination-hero" style="background-image: url('../../assets/images/destinations/phuket_16_9.png');">
     <div class="phuket-hero-text">
@@ -226,6 +236,11 @@
         <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
-
+<script>
+function toggleMobileMenu() {
+  document.querySelector('.mobile-nav')
+    .classList.toggle('active');
+}
+</script>
 </body>
 </html>

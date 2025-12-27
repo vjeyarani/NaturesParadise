@@ -17,22 +17,30 @@
         <div class="logo">
             <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo" />
         </div>
-
-        <nav>
+        <nav class="nav-desktop">
             <ul class="nav-menu flex">
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="../destinations.html">Destinations</a></li>
-                <li><a href="#guides.html">Blogs</a></li>
-                <li><a class="active" href="stays.html">Stays</a></li>
-                <li><a href="../december/december-hub.html">December Hub</a></li>
-                <li><a href="../plans/travel-plan.html">Travel Plans</a></li>
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../contact.html">Contact Us</a></li>
+                <li><a href="../../pages/destinations.html">Destinations</a></li>
+                <li><a href="../../blogs/index.html">Blogs</a></li>
+                <li><a href="../../pages/stays/stays.html">Stays</a></li>
+                <li><a href="../../pages/december/december-hub.html">December Hub</a></li>
+                <li><a href="../../pages/plans/travel-plan.html">Travel Plans</a></li>
+                <li><a href="../../pages/about.html">About Us</a></li>
+                <li><a href="../../pages/contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
+   <div class="mobile-nav" onclick="this.classList.remove('active')">
+               <a href="../../index.html">Home</a>
+               <a href="../../pages/destinations.html">Destinations</a>
+               <a href="../../blogs/index.html">Blogs</a>
+               <a href="../../pages/stays/stays.html">Stays</a>
+               <a href="../../pages/december/december-hub.html">December Hub</a>
+               <a href="../../pages/plans/travel-plan.html">Travel Plans</a>
+               <a href="../../pages/about.html">About Us</a>
+               <a href="../../pages/contact.html">Contact Us</a>
+        </div>
 <!-- HERO -->
 <section class="hero-section" style="margin-top:40px;background-image:url('../../assets/images/stays/singapore_sentosa_resort.png);">
     <div class="hero-content text-center">
@@ -60,21 +68,21 @@
     <!-- Stay 1 -->
     <section class="destination-section text-center">
     <div class="destination-grid grid-3">
-        <a href="https://affiliate.example.com/?src=xploreworld&dest=beachfront_luxury" class="destination-card">
+        <a href="#https://affiliate.example.com/?src=xploreworld&dest=beachfront_luxury" class="destination-card">
         <img src="../../assets/images/stays/phuket_stay_beachfront_4_5.png" class="destination-img" alt="Curated Stay 1">
         <h3>Beachfront Luxury</h3>
         <p>Warm sunsets, private pools & premium comfort.</p>
      </a>
 
     <!-- Stay 2 -->
-    <a href="https://affiliate.example.com/?src=xploreworld&dest=urban_premium_suites" class="destination-card">
+    <a href="#https://affiliate.example.com/?src=xploreworld&dest=urban_premium_suites" class="destination-card">
         <img src="../../assets/images/stays/dubai_marina_waterfront_stay02.png" class="card-img" alt="Curated Stay 2">
         <h3>Urban Premium Suites</h3>
         <p>Skyline views, seamless access & modern luxury.</p>
     </a>
 
 <!-- Stay 3 -->
-     <a href="https://affiliate.example.com/?src=xploreworld&dest=nature_retreat" class="destination-card">
+     <a href="#https://affiliate.example.com/?src=xploreworld&dest=nature_retreat" class="destination-card">
         <img src="../../assets/images/stays/coorg_coffee_estate_stay.png" class="card-img" alt="Curated Stay 3">
         <h3>Nature Retreat</h3>
         <p>Peaceful escapes surrounded by calm greenery.</p>
@@ -113,55 +121,49 @@
             </div>
         </div>
     </section>
-
     <!-- AFFILIATE CTA -->
     <section class="destination-section text-center">
         <div class="container">
             <h2>Looking for More?</h2>
             <p>Use our curated links to explore more premium stays from trusted partners.</p>
-
             <a href="#" class="cta-btn">Explore Vetted Partner Hotels</a>
         </div>
     </section>
-
 </main>
 
 <!-- FOOTER -->
 <footer id="premium-footer">
-
     <div class="footer-container">
-
         <div class="footer-col">
             <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
             <p class="footer-tagline">A Premium Travel Platform</p>
         </div>
-
         <div class="footer-col">
             <h4>Destinations</h4>
             <ul>
-                <li><a href="../destinations.html">All Destinations</a></li>
-                <li><a href="../destinations/bali.html">Bali</a></li>
-                <li><a href="../destinations/maldives.html">Maldives</a></li>
-                <li><a href="../destinations/switzerland.html">Switzerland</a></li>
+                <li><a href="../../pages/destinations.html">All Destinations</a></li>
+                <li><a href="../../pages/destinations/bali.html">Bali</a></li>
+                <li><a href="../../pages/destinations/maldives.html">Maldives</a></li>
+                <li><a href="../../pages/destinations/switzerland.html">Switzerland</a></li>
             </ul>
         </div>
-
         <div class="footer-col">
             <h4>Explore</h4>
             <ul>
-                <li><a href="#guides.html">Guides</a></li>
-                <li><a href="#stays.html">Stays</a></li>
-                <li><a href="../december/december-hub.html">December Hub</a></li>
-                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../../blogs/index.html">Blogs</a></li>
+                <li><a href="stays.html">Stays</a></li>
+                <li><a href="../../pages/december/december-hub.html">December Hub</a></li>
+                <li><a href="../../pages/about.html">About Us</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h4>Connect</h4>
             <ul class="social">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Pinterest</a></li>
-                <li><a href="#">Email</a></li>
+                <li><a href="#"><span>📸</span> Instagram</a></li>
+                <li><a href="#"><span>📌</span> Pinterest</a></li>
+                <li><a href="mailto:xploreworld.global@gmail.com">
+                <span>📧</span> Email</a></li>
                 <li>📲 <a href="https://wa.me/916361350870" target="_blank"> WhatsApp Us</a></li>
             </ul>
         </div>

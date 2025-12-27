@@ -13,18 +13,18 @@
 
   <!-- HEADER -->
   <header id="site-header">
-    <div class="container flex-between">
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button>
+      <div class="container flex-between">
       <div class="logo">
-        <img src="../../assets/logo/XPLORE01.Webp" alt="XPLORE WORLD Logo">
+        <img src="../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo">
       </div>
-
-      <nav>
+     <nav class="nav-desktop">
         <ul class="nav-menu flex">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../destinations.html">Destinations</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
           <li><a href="../blogs/index.html">Blogs</a></li>
-          <li><a href="stays.html">Stays</a></li>
-          <li><a href="december/december-hub.html">December Hub</a></li>
+          <li><a href="stays/stays.html">Stays</a></li>
+          <li><a href="pages/december/december-hub.html">December Hub</a></li>
           <li><a href="plans/travel-plan.html">Travel Plans</a></li>
           <li><a href="about.html" class="active">About Us</a></li>
           <li><a href="contact.html">Contact Us</a></li>
@@ -32,6 +32,17 @@
       </nav>
     </div>
   </header>
+<div class="mobile-nav" onclick="this.classList.remove('active')">
+                <a href="../index.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="../blogs/index.html">Blogs</a>
+                <a href="stays/stays.html">Stays</a>
+                <a href="december/december-hub.html">December Hub</a>
+                <a href="plans/travel-plan.html">Travel Plans</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+   
+</div>
 
 <!-- ===============================
      ABOUT PAGE — SUNRISE HERO
@@ -161,7 +172,7 @@
 
         <!-- Column 1: Logo & Tagline -->
         <div class="footer-col">
-            <img src="../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
+            <img src="../assets/logo/XPLORE01.webp" alt="XPLORE WORLD" class="footer-logo">
             <p class="footer-tagline">A Premium Travel Curation Partner</p>
         </div>
 
@@ -180,8 +191,8 @@
         <div class="footer-col">
             <h4>Explore</h4>
             <ul>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="stays.html">Stays</a></li>
+                <li><a href="../blogs/index.html">Blogs</a></li>
+                <li><a href="stays/stays.html">Stays</a></li>
                 <li><a href="december/december-hub.html">December Hub</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
@@ -206,3 +217,11 @@
         <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+function toggleMobileMenu() {
+  document.querySelector('.mobile-nav')
+    .classList.toggle('active');
+}
+</script>
+</body>
+</html>

@@ -13,34 +13,44 @@
 
 <!-- Header: reuse your site header (if you have an include, use that) -->
 <header id="site-header">
+  <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button> 
   <div class="container flex-between">
     <div class="logo">
-      <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD Logo">
+      <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo">
       <span class="brand-name"><span class="brand-light"></span><span class="brand-bold"></span></span>
     </div>
-
-    <nav>
+ <nav class="nav-desktop">
       <ul class="nav-menu flex">
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="../pages/destinations.html">Destinations</a></li>
-        <li><a href="#../pages/guides.html">Guides</a></li>
-        <li><a href="#../pages/stays.html">Stays</a></li>
+        <li><a href="../../pages/destinations.html">Destinations</a></li>
+        <li><a href="../../blogs/index.html">Blogs</a></li>
+        <li><a href="../../pages/stays/stays.html">Stays</a></li>
         <li><a href="december-hub.html" class="active">December Hub</a></li>
-        <li><a href="../plans/travel-plan.html" class="active">Travel Plans</a></li>
-        <li><a href="../about.html">About Us</a></li>
-        <li><a href="../pages/contact.html">Contact Us</a></li>
+        <li><a href="../../pages/plans/travel-plan.html" class="active">Travel Plans</a></li>
+        <li><a href="../../pages/about.html">About Us</a></li>
+        <li><a href="../../pages/contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
+    <div class="mobile-nav" onclick="this.classList.remove('active')">
+    <a href="../../index.html">Home</a>
+        <a href="../pages/destinations.html">Destinations</a>
+        <a href="../../blogs/index.html">Blogs</a>
+        <a href="../../pages/stays/stays.html">Stays</a>
+        <a href="december-hub.html" class="active">December Hub</a>
+        <a href="../../pages/plans/travel-plan.html" class="active">Travel Plans</a>
+        <a href="../../pages/about.html">About Us</a>
+        <a href="../../pages/contact.html">Contact Us</a>
+   
+    </div>
 <!-- HERO -->
  <section class="destination-hero" style="background-image: url('../../assets/images/december/december_hub_herooo.png');">
         <div class="hero-content">
           <h1>Your Family’s Warm December Escape</h1>
           <p>Cozy moments, warm beaches, calm nature getaways — curated for effortless family travel.</p>
          <div class="hero-cta">
-          <a href="../destinations.html" class="hero-btn btn-hero-primary">Explore All Destinations</a>
+          <a href="../../pages/destinations.html" class="hero-btn btn-hero-primary">Explore All Destinations</a>
           <a href="../../assets/kits/December-Family-Kit.pdf" class="hero-btn btn-hero-secondary">Download Free December Family Kit</a>
         </div>
         </div>
@@ -219,7 +229,7 @@
       </a>
       </div>
       <div class="destination-card">
-      <a href="../stays/villas.html">
+      <a href="#../stays/villas.html">
         <img src="../../assets/images/destinations/maldives/maldives.png" alt="Villas" class="destination-img"/>
         <h3>Villas</h3>
         <p>Private, spacious, family-friendly hideaways.</p>
@@ -312,10 +322,10 @@
         <div class="footer-col">
             <h4>Explore</h4>
             <ul>
-                <li><a href="guides.html">Guides</a></li>
-                <li><a href="stays.html">Stays</a></li>
+                <li><a href="../../blogs/index.html">Blogs</a></li>
+                <li><a href="../../pages/stays//stays.html">Stays</a></li>
                 <li><a href="december-hub.html">December Hub</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="../about.html">About Us</a></li>
             </ul>
         </div>
 
@@ -338,5 +348,11 @@
         <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+function toggleMobileMenu() {
+  document.querySelector('.mobile-nav')
+    .classList.toggle('active');
+}
+</script>
 </body>
 </html>

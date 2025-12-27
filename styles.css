@@ -3928,7 +3928,7 @@ footer {
   position: sticky;
   top: 0;
   background: #fff;
-  z-index: 1000;
+  z-index: 10;
 }
 
 /* =========================
@@ -3949,13 +3949,20 @@ footer {
 .mobile-nav {
   display: none;
   flex-direction: column;
-  position: absolute;
-  top: 64px;              /* below header */
+  margin-top: 0;
+  position: fixed;        /* 👈 IMPORTANT */
+  top: 64px;              /* header height */
   left: 0;
-  width: 100%;
+
+  width: 60%;             /* or use 280px if you prefer fixed */
+  max-width: 300px;       /* keeps it premium on tablets */
+  height: calc(100vh - 64px);
+
   background: #ffffff;
-  z-index: 999;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  z-index: 9999;
+
+  padding-top: 0;         /* 👈 remove fake spacing */
+  box-shadow: 4px 0 24px rgba(0,0,0,0.15);
 }
 
 /* Show when active */
@@ -3965,8 +3972,10 @@ footer {
 
 /* Links */
 .mobile-nav a {
+  margin: 0;
   padding: 14px 20px;
   text-decoration: none;
+  display: block;
   color: #111;
   border-bottom: 1px solid #eee;
   font-size: 16px;
@@ -4000,3 +4009,27 @@ footer {
     display: none;   /* 👈 THIS FIXES YOUR ISSUE */
   }
 }
+/* FORCE HIDE DESKTOP NAV ON MOBILE — GLOBAL */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+}
+//* ==== MOBILE NAV OVERRIDE (FINAL) ==== */
+@media (max-width: 768px) {
+  header .nav-desktop,
+  header nav,
+  header .nav-menu {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+}
+
+

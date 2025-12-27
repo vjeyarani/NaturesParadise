@@ -12,23 +12,35 @@
 <body>
 <!-- ================= HEADER ================= -->
 <header id="site-header">
-  <div class="nav-container">
+  <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button> 
+  <div class="nav-container flex-between                                                                                                                                   ">
     <div class="logo">
       <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD Logo">
     </div>
-
-    <nav class="main-nav">
-      <a href="../../index.html">Home</a>
-      <a href="../destinations.html">Destinations</a>
-      <a href="/blogs/index.html">Blogs</a>
-      <a href="../stays/stays.html">Stays</a>
-      <a href="../december/december-hub.html">December Hub</a>
-      <a class="active" href="../plans/travel-plan.html">Travel Plans</a>
-      <a href="../about.html">About Us</a>
-      <a href="../contact.html">Contact Us</a>
+<nav class="nav-desktop">
+     <ul class="main-nav flex">
+      <li><a href="../index.html">Home</a></li>
+     <li><a href="../pages/destinations.html">Destinations</a></li>
+      <li><a href="/blogs/index.html">Blogs</a></li>
+      <li><a href="../pages/stays/stays.html">Stays</a></li>
+      <li><a href="../pages/december/december-hub.html">December Hub</a></li>
+      <li><a href="../pages/plans/travel-plan.html">Travel Plans</a></li>
+      <li><a href="../pages/about.html">About Us</a></li>
+      <li><a href="../pages/contact.html">Contact Us</a></li>
     </nav>
+    </nav> 
   </div>
 </header>
+  <div class="mobile-nav" onclick="this.classList.remove('active')">
+     <a href="../index.html">Home</a>
+     <a href="../pages/destinations.html">Destinations</a>
+     <a href="index.html">Blogs</a>
+      <a href="../pages/stays/stays.html">Stays</a>
+      <a href="../pages/december/december-hub.html">December Hub</a>
+      <a href="../pages/plans/travel-plan.html">Travel Plans</a>
+      <a href="../pages/about.html">About Us</a></li>
+      <a href="../pages/contact.html">Contact Us</a>
+</div>
   <!-- Blog Hero -->
   <section class="blog-hero">
     <h1>The Art of the Transition</h1>
@@ -72,27 +84,27 @@ Great travel design is invisible. You only notice it when it goes wrong. We make
     <div class="footer-container">
 
         <div class="footer-col">
-            <img src="../../assets/logo/XPLORE01.png" alt="XPLORE WORLD" class="footer-logo">
+            <img src="../../assets/logo/XPLORE01.webp" alt="XPLORE WORLD" class="footer-logo">
             <p class="footer-tagline">A Premium Travel Curation Partner</p>
         </div>
 
         <div class="footer-col">
             <h4>Destinations</h4>
             <ul>
-                <li><a href="../destinations.html">All Destinations</a></li>
-                <li><a href="bali.html">Bali</a></li>
-                <li><a href="maldives.html">Maldives</a></li>
-                <li><a href="goa.html">Goa</a></li>
+                <li><a href="../pages/destinations.html">All Destinations</a></li>
+                <li><a href="../pages/destinations/bali.html">Bali</a></li>
+                <li><a href="../pages/destinations/maldives.html">Maldives</a></li>
+                <li><a href="../pages/destinations/goa.html">Goa</a></li>
            </ul>
         </div>
 
         <div class="footer-col">
             <h4>Explore</h4>
             <ul>
-                <li><a href="../guides.html">Guides</a></li>
-                <li><a href="../stays.html">Stays</a></li>
-                <li><a href="../december/december-hub.html">December Hub</a></li>
-                <li><a href="../about.html">About Us</a></li>
+                <li><a href="index.html">Blogs</a></li>
+                <li><a href="../pages/stays/stays.html">Stays</a></li>
+                <li><a href="../pages/december/december-hub.html">December Hub</a></li>
+                <li><a href="../pages/about.html">About Us</a></li>
             </ul>
         </div>
 
@@ -113,5 +125,11 @@ Great travel design is invisible. You only notice it when it goes wrong. We make
         <p>© 2025 XPLORE WORLD. All Rights Reserved.</p>
     </div>
 </footer>
+<script>
+function toggleMobileMenu() {
+  document.querySelector('.mobile-nav')
+    .classList.toggle('active');
+}
+</script>
 </body>
 </html>
