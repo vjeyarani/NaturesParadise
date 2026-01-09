@@ -24,9 +24,10 @@
             <ul class="nav-menu flex">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pages/destinations.html">Destinations</a></li>
-                <li><a href="blogs/index.html">Blogs</a></li>
+                      <li><a href="pages/itineraries.html" class="honeymoon">Itineraries</a></li> 
+                      <li><a href="blogs/index.html">Blogs</a></li>
                 <li><a href="pages/stays/stays.html">Stays</a></li>
-                <li><a href="pages/december/december-hub.html">December Hub</a></li>
+                <li><a href="pages/december/december-hub.html">Dec Hub</a></li>
                 <li><a href="pages/plans/travel-plan.html">Travel Plans</a></li>
                 <li><a href="pages/about.html">About Us</a></li>
                 <li><a href="pages/contact.html">Contact Us</a></li>
@@ -38,9 +39,10 @@
 <div class="mobile-nav" onclick="this.classList.remove('active')">
             <a href="index.html">Home</a>
                 <a href="pages/destinations.html">Destinations</a>
+                <li><a href="pages/itineraries.html" class="honeymoon">Itineraries</a></li>
                 <a href="blogs/index.html">Blogs</a>
                 <a href="pages/stays/stays.html">Stays</a>
-                <a href="pages/december/december-hub.html">December Hub</a>
+                <a href="pages/december/december-hub.html">Dec Hub</a>
                 <a href="pages/plans/travel-plan.html">Travel Plans</a>
                 <a href="pages/about.html">About Us</a>
                 <a href="pages/contact.html">Contact Us</a>
@@ -282,16 +284,31 @@
 </section>
 
     <!-- EMAIL CAPTURE -->
-   <section id="email-capture"style="margin-top:8px;margin-bottom:8px;" >
-    <div class="container text-center">
-        <h2>Get Travel Inspiration in Your Inbox</h2>
-        <p>Minimal emails. Maximum value.</p>
+<section class="email-capture" style="margin-top:8px;margin-bottom:8px;">
+  <div class="container text-center">
+    <h3>Subscribe to XPLOREWorld Newsletter</h3>
+    <p>Minimal emails. Maximum value.</p>
 
-    <div class="email-form">
-        <input type="email" placeholder="Enter your email">
-        <button class="cta-btn">Send Me New Travel Ideas</button>
-    </div>
-    </div>
+    <form 
+      name="newsletter" 
+      method="POST" 
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="newsletter">
+      <input type="hidden" name="bot-field">
+
+      <div class="email-form newsletter-box">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="you@example.com" 
+          required
+        />
+        <button class="cta-btn" type="submit">Subscribe</button>
+      </div>
+    </form>
+  </div>
 </section>
 
 
